@@ -3,52 +3,145 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Özfavori Koltuk Yıkama | Sarıyer ve İstanbul Profesyonel Temizlik</title>
+    <title>Özfavori Koltuk Yıkama | Sarıyer Profesyonel Temizlik Hizmetleri</title>
     <style>
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; padding: 0; background-color: #f4f7f6; color: #333; text-align: center; }
-        header { background: linear-gradient(135deg, #007bff, #0056b3); color: white; padding: 40px 20px; }
-        h1 { margin: 0; font-size: 2.5rem; }
-        p { font-size: 1.2rem; margin: 10px 0 20px; }
-        .container { max-width: 800px; margin: 30px auto; padding: 0 20px; }
-        .btn-whatsapp { display: inline-block; background-color: #25D366; color: white; padding: 15px 30px; font-size: 1.3rem; font-weight: bold; text-decoration: none; border-radius: 50px; box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4); transition: transform 0.2s; }
-        .btn-whatsapp:hover { transform: scale(1.05); }
-        .features { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; margin-top: 40px; }
-        .feature-box { background: white; padding: 20px; border-radius: 10px; width: 220px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
-        .feature-box h3 { color: #007bff; margin-top: 0; }
-        footer { margin-top: 50px; padding: 20px; background: #333; color: white; font-size: 0.9rem; }
+        :root { --primary: #007bff; --secondary: #25D366; --dark: #2c3e50; --light: #f8f9fa; }
+        body { font-family: 'Segoe UI', Arial, sans-serif; margin: 0; padding: 0; background-color: #f4f7f6; color: #333; line-height: 1.6; }
+        
+        /* Navigasyon / Üst Menü */
+        nav { background: white; padding: 15px 20px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 1000; }
+        nav .logo { font-size: 1.5rem; font-weight: bold; color: var(--primary); }
+        nav .phone { font-weight: bold; color: var(--dark); }
+
+        /* Ana Karşılama Alanı (Hero) */
+        .hero { background: linear-gradient(rgba(0, 123, 255, 0.8), rgba(0, 86, 179, 0.9)), url('https://unsplash.com') no-repeat center center/cover; color: white; padding: 100px 20px; text-align: center; }
+        .hero h1 { font-size: 3rem; margin: 0 0 10px; font-weight: 800; text-shadow: 2px 2px 4px rgba(0,0,0,0.3); }
+        .hero p { font-size: 1.4rem; margin: 0 0 30px; }
+
+        /* Butonlar */
+        .btn { display: inline-block; padding: 15px 35px; font-size: 1.2rem; font-weight: bold; text-decoration: none; border-radius: 50px; transition: transform 0.2s, box-shadow 0.2s; }
+        .btn-whatsapp { background-color: var(--secondary); color: white; box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4); }
+        .btn-whatsapp:hover { transform: scale(1.05); box-shadow: 0 6px 20px rgba(37, 211, 102, 0.6); }
+
+        .container { max-width: 1100px; margin: 60px auto; padding: 0 20px; }
+        h2 { font-size: 2.2rem; color: var(--dark); margin-bottom: 40px; position: relative; }
+        h2::after { content: ''; display: block; width: 60px; height: 4px; background: var(--primary); margin: 10px auto 0; border-radius: 2px; }
+
+        /* Hizmetlerimiz ve Görseller */
+        .services { display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; }
+        .service-card { background: white; border-radius: 15px; overflow: hidden; width: 320px; box-shadow: 0 10px 20px rgba(0,0,0,0.05); text-align: left; transition: transform 0.3s; }
+        .service-card:hover { transform: translateY(-5px); }
+        .service-card img { width: 100%; height: 200px; object-fit: cover; }
+        .service-card-body { padding: 20px; }
+        .service-card h3 { margin: 0 0 10px; color: var(--dark); }
+
+        /* Fiyat Tablosu */
+        .price-table { width: 100%; max-width: 700px; margin: 0 auto; border-collapse: collapse; background: white; border-radius: 10px; overflow: hidden; box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
+        .price-table th { background: var(--primary); color: white; padding: 15px; font-size: 1.1rem; }
+        .price-table td { padding: 15px; border-bottom: 1px solid #eee; text-align: left; }
+        .price-table tr:last-child td { border-bottom: none; }
+        .price-table td.price { text-align: right; font-weight: bold; color: var(--primary); }
+
+        /* Yorumlar ve Bölgeler */
+        .info-section { display: flex; flex-wrap: wrap; gap: 30px; margin-top: 60px; }
+        .info-box { flex: 1; min-width: 300px; background: white; padding: 30px; border-radius: 15px; box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
+
+        footer { background: var(--dark); color: white; padding: 40px 20px; margin-top: 80px; font-size: 0.9rem; }
+        footer a { color: #fff; text-decoration: underline; }
     </style>
 </head>
 <body>
 
-    <header>
+    <nav>
+        <div class="logo">✨ Özfavori Temizlik</div>
+        <div class="phone">📞 İletişim: 0505 598 44 87</div>
+    </nav>
+
+    <header class="hero">
         <h1>Özfavori Koltuk Yıkama</h1>
-        <p>Sarıyer ve İstanbul Genelinde Profesyonel Koltuk Yıkama Hizmeti</p>
-        <p>Evde Yerinde Temizlik | Lekelere Kesin Çözüm | Uygun Fiyatlar</p>
-        <a href="https://wa.me?" class="btn-whatsapp" target="_blank">🟢 WhatsApp ile Fiyat Al / Randevu Oluştur</a>
+        <p>Sarıyer ve İstanbul Genelinde Bitkisel Ürünlerle Profesyonel Yerinde Temizlik</p>
+        <a href="https://wa.me?" class="btn btn-whatsapp" target="_blank">🟢 WhatsApp İle Hızlı Fiyat Al</a>
     </header>
 
     <div class="container">
-        <h2>Neden Özfavori Koltuk Yıkama?</h2>
-        <div class="features">
-            <div class="feature-box">
-                <h3>Yerinde Hizmet</h3>
-                <p>Koltuklarınızı evinizden taşımadan, gözünüzün önünde son teknoloji makinelerle yıkıyoruz.</p>
+        <h2>Neler Yapıyoruz?</h2>
+        <div class="services">
+            <div class="service-card">
+                <img src="https://unsplash.com" alt="Koltuk Yıkama">
+                <div class="service-card-body">
+                    <h3>Koltuk Yıkama</h3>
+                    <p>Kumaş analizine uygun bitkisel şampuanlar ve yüksek vakumlu Alman teknolojili makinelerle derinlemesine temizlik.</p>
+                </div>
             </div>
-            <div class="feature-box">
-                <h3>Bitkisel Şampuanlar</h3>
-                <p>Aileniz ve evcil hayvanlarınız için tamamen zararsız, antibakteriyel ürünler kullanıyoruz.</p>
+            <div class="service-card">
+                <img src="https://unsplash.com" alt="Yatak Yıkama">
+                <div class="service-card-body">
+                    <h3>Yatak Temizliği</h3>
+                    <p>Yataklarınızdaki tüm miteları, bakterileri ve görünmeyen lekeleri antibakteriyel buharlı sistemle yok ediyoruz.</p>
+                </div>
             </div>
-            <div class="feature-box">
-                <h3>Hızlı Kuruma</h3>
-                <p>Güçlü vakumlama sistemimiz sayesinde koltuklarınız saatler içinde kullanıma hazır olur.</p>
+            <div class="service-card">
+                <img src="https://unsplash.com" alt="Sandalye Yıkama">
+                <div class="service-card-body">
+                    <h3>Sandalye ve Stor Perde</h3>
+                    <p>Yemek odası sandalyeleriniz, minderleriniz ve yerinde temizliğe uygun stor perdeleriniz titizlikle yıkanır.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <h2>Ortalama Hizmet Fiyatları</h2>
+        <table class="price-table">
+            <thead>
+                <tr>
+                    <th>Hizmet Tipi</th>
+                    <th>Fiyat Aralığı</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>L Koltuk Yıkama</td>
+                    <td class="price">WhatsApp'tan Sorun</td>
+                </tr>
+                <tr>
+                    <td>7 Kişilik Standart Koltuk Takımı</td>
+                    <td class="price">WhatsApp'tan Sorun</td>
+                </tr>
+                <tr>
+                    <td>Çift Kişilik Yatak Yıkama</td>
+                    <td class="price">WhatsApp'tan Sorun</td>
+                </tr>
+                <tr>
+                    <td>Tek Kişilik Yatak Yıkama</td>
+                    <td class="price">WhatsApp'tan Sorun</td>
+                </tr>
+                <tr>
+                    <td>Sandalye Yıkama (Adet)</td>
+                    <td class="price">WhatsApp'tan Sorun</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="container">
+        <div class="info-section">
+            <div class="info-box">
+                <h3>📍 Hizmet Bölgelerimiz</h3>
+                <p>Başta **Sarıyer** olmak üzere, Beşiktaş, Şişli, Eyüpsultan, Kağıthane ve tüm İstanbul Avrupa Yakası ilçelerine servisimiz mevcuttur. Kapıda nakit veya EFT ile ödeme kolaylığı sunuyoruz.</p>
+            </div>
+            <div class="info-box">
+                <h3>⭐ Neden Özfavori?</h3>
+                <p>Yıkama esnasında koltuk kumaşlarınıza asla zarar vermeyen özel fırçalar kullanıyoruz. %100 hijyen garantisi, lekeler üzerinde maksimum başarı oranı ve hızlı kuruma teknolojisi.</p>
             </div>
         </div>
     </div>
 
     <footer>
-        <p>© 2026 Özfavori Koltuk Yıkama. Tüm Hakları Saklıdır.</p>
+        <p><b>Özfavori Koltuk Yıkama Hizmetleri</b><br>
+        Sarıyer / İstanbul | Telefon: 0505 598 44 87<br><br>
+        © 2026 Tüm Hakları Saklıdır.</p>
     </footer>
 
 </body>
 </html>
-
