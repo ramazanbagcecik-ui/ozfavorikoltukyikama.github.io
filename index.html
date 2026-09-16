@@ -4,14 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Özfavori Koltuk Yıkama | Sarıyer & İstanbul</title>
+    <title>Özfavori Koltuk Yıkama | İstanbul</title>
 
-    <meta name="description" content="Özfavori Koltuk Yıkama. Sarıyer ve İstanbul Avrupa Yakası'nda profesyonel koltuk, yatak, sandalye ve perde temizliği. Yerinde hizmet ve hızlı randevu.">
-
-    <meta name="theme-color" content="#087f5b">
+    <meta name="description"
+          content="Özfavori Koltuk Yıkama - İstanbul genelinde profesyonel yerinde koltuk, sandalye, yatak ve araç koltuğu temizliği.">
 
     <style>
         * {
+            margin: 0;
+            padding: 0;
             box-sizing: border-box;
         }
 
@@ -20,211 +21,170 @@
         }
 
         body {
-            margin: 0;
             font-family: Arial, Helvetica, sans-serif;
-            background: #f5f8f7;
-            color: #263238;
+            background: #f7fafc;
+            color: #17324d;
             line-height: 1.6;
         }
 
-        a {
-            text-decoration: none;
-        }
+        /* =========================
+           ÜST MENÜ
+        ========================= */
 
-        .container {
-            width: min(1120px, 92%);
-            margin: auto;
-        }
-
-        /* ÜST MENÜ */
-        nav {
+        .navbar {
+            width: 100%;
+            background: #ffffff;
             position: sticky;
             top: 0;
-            z-index: 1000;
-            background: rgba(255,255,255,0.97);
-            box-shadow: 0 2px 15px rgba(0,0,0,0.08);
+            z-index: 9999;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
         }
 
-        .nav-inner {
-            min-height: 72px;
+        .nav-container {
+            max-width: 1200px;
+            margin: auto;
+            min-height: 78px;
+            padding: 0 25px;
+
             display: flex;
             align-items: center;
             justify-content: space-between;
-            gap: 20px;
+            gap: 25px;
         }
 
         .logo {
-            font-size: 1.35rem;
+            text-decoration: none;
+            font-size: 24px;
             font-weight: 800;
-            color: #087f5b;
+            color: #159447;
+            white-space: nowrap;
         }
 
-        .nav-phone {
-            color: #263238;
+        .logo span {
+            color: #0877d1;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 32px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #17324d;
+            font-size: 16px;
             font-weight: 700;
+            transition: 0.25s;
         }
 
-        .nav-phone:hover {
-            color: #087f5b;
+        .nav-links a:hover {
+            color: #0877d1;
         }
 
-        /* HERO */
+        .phone {
+            text-decoration: none;
+            color: #17324d;
+            font-weight: 700;
+            white-space: nowrap;
+        }
+
+        /* =========================
+           HERO
+        ========================= */
+
         .hero {
-            position: relative;
-            overflow: hidden;
-            background:
-                linear-gradient(135deg, #075e54, #087f5b 55%, #12a06f);
-            color: white;
+            min-height: 470px;
+            background: linear-gradient(135deg, #168be0, #1769b5);
+            display: flex;
+            align-items: center;
+            justify-content: center;
             text-align: center;
-            padding: 95px 20px 105px;
-        }
-
-        .hero::before {
-            content: "";
-            position: absolute;
-            width: 350px;
-            height: 350px;
-            border-radius: 50%;
-            background: rgba(255,255,255,0.08);
-            top: -160px;
-            left: -120px;
-        }
-
-        .hero::after {
-            content: "";
-            position: absolute;
-            width: 280px;
-            height: 280px;
-            border-radius: 50%;
-            background: rgba(255,255,255,0.07);
-            right: -100px;
-            bottom: -130px;
+            color: white;
+            padding: 70px 20px;
         }
 
         .hero-content {
-            position: relative;
-            z-index: 2;
-            max-width: 850px;
-            margin: auto;
-        }
-
-        .hero-badge {
-            display: inline-block;
-            background: rgba(255,255,255,0.15);
-            border: 1px solid rgba(255,255,255,0.25);
-            padding: 8px 16px;
-            border-radius: 50px;
-            font-weight: 700;
-            margin-bottom: 20px;
+            max-width: 900px;
         }
 
         .hero h1 {
-            font-size: clamp(2.2rem, 6vw, 4.4rem);
-            line-height: 1.1;
-            margin: 0 0 20px;
-            font-weight: 900;
+            font-size: 52px;
+            line-height: 1.15;
+            margin-bottom: 20px;
+            font-weight: 800;
+        }
+
+        .hero h1 span {
+            color: #72e35a;
         }
 
         .hero p {
-            font-size: clamp(1.05rem, 2.5vw, 1.35rem);
-            max-width: 720px;
-            margin: 0 auto 32px;
-            opacity: 0.95;
+            font-size: 21px;
+            margin-bottom: 35px;
         }
 
-        .buttons {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 14px;
-        }
-
-        .btn {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            min-height: 54px;
-            padding: 14px 28px;
-            border-radius: 50px;
-            font-weight: 800;
-            font-size: 1rem;
-            transition: 0.2s ease;
-        }
-
-        .btn:hover {
-            transform: translateY(-2px);
-        }
-
-        .btn-whatsapp {
-            background: #25D366;
+        .whatsapp-btn {
+            display: inline-block;
+            background: #20d56a;
             color: white;
-            box-shadow: 0 8px 25px rgba(0,0,0,0.18);
+            text-decoration: none;
+            padding: 16px 30px;
+            border-radius: 40px;
+            font-size: 18px;
+            font-weight: 800;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.18);
+            transition: 0.25s;
         }
 
-        .btn-call {
-            background: white;
-            color: #075e54;
+        .whatsapp-btn:hover {
+            transform: translateY(-3px);
+            background: #16bd59;
         }
 
-        /* BİLGİ KARTLARI */
-        .quick-info {
-            margin-top: -35px;
-            position: relative;
-            z-index: 5;
-        }
+        /* =========================
+           GENEL BÖLÜM
+        ========================= */
 
-        .quick-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 18px;
-        }
-
-        .quick-card {
-            background: white;
-            padding: 24px;
-            border-radius: 16px;
-            text-align: center;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-        }
-
-        .quick-icon {
-            font-size: 2rem;
-        }
-
-        .quick-card strong {
-            display: block;
-            margin-top: 8px;
-            font-size: 1.05rem;
-        }
-
-        .quick-card span {
-            color: #667;
-            font-size: 0.92rem;
-        }
-
-        /* GENEL BÖLÜM */
         section {
-            padding: 85px 0;
+            scroll-margin-top: 90px;
+        }
+
+        .section {
+            max-width: 1200px;
+            margin: auto;
+            padding: 80px 25px;
         }
 
         .section-title {
             text-align: center;
-            margin-bottom: 45px;
+            margin-bottom: 50px;
         }
 
         .section-title h2 {
-            font-size: clamp(2rem, 4vw, 2.8rem);
-            margin: 0 0 10px;
-            color: #263238;
+            font-size: 38px;
+            color: #17324d;
+            margin-bottom: 12px;
         }
 
         .section-title p {
-            margin: 0 auto;
-            max-width: 650px;
-            color: #68777b;
+            color: #60758a;
+            font-size: 17px;
         }
 
-        /* HİZMETLER */
+        .line {
+            width: 65px;
+            height: 5px;
+            background: #168be0;
+            margin: 15px auto 0;
+            border-radius: 10px;
+        }
+
+        /* =========================
+           HİZMETLER
+        ========================= */
+
         .services {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -233,254 +193,220 @@
 
         .service-card {
             background: white;
+            padding: 35px 25px;
             border-radius: 18px;
-            padding: 32px 26px;
-            box-shadow: 0 8px 25px rgba(0,0,0,0.06);
-            border: 1px solid #e8eeee;
-            transition: 0.25s ease;
+            text-align: center;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.07);
+            transition: 0.25s;
         }
 
         .service-card:hover {
             transform: translateY(-6px);
-            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
         }
 
         .service-icon {
-            width: 64px;
-            height: 64px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: #e7f7f1;
-            border-radius: 16px;
-            font-size: 2rem;
-            margin-bottom: 20px;
+            font-size: 50px;
+            margin-bottom: 15px;
         }
 
         .service-card h3 {
-            margin: 0 0 10px;
-            color: #075e54;
-            font-size: 1.3rem;
+            color: #0877d1;
+            font-size: 23px;
+            margin-bottom: 10px;
         }
 
         .service-card p {
-            color: #657276;
-            margin: 0;
+            color: #60758a;
         }
 
-        /* FİYAT */
-        .price-section {
+        /* =========================
+           HAKKIMIZDA
+        ========================= */
+
+        .about {
             background: white;
         }
 
-        .price-box {
+        .about-box {
+            max-width: 900px;
+            margin: auto;
+            text-align: center;
+        }
+
+        .about-box p {
+            font-size: 18px;
+            color: #52697d;
+            margin-bottom: 18px;
+        }
+
+        /* =========================
+           GALERİ
+        ========================= */
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .gallery-item {
+            height: 220px;
+            border-radius: 16px;
+            background: linear-gradient(135deg, #e9f5ff, #dff7e7);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 60px;
+            box-shadow: 0 5px 18px rgba(0,0,0,0.06);
+        }
+
+        /* =========================
+           İLETİŞİM
+        ========================= */
+
+        .contact-section {
+            background: #edf7ff;
+        }
+
+        .contact-box {
             max-width: 800px;
             margin: auto;
-            border-radius: 18px;
-            overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-            border: 1px solid #e8eeee;
-        }
-
-        .price-row {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            gap: 20px;
-            padding: 19px 24px;
-            border-bottom: 1px solid #edf1f1;
-        }
-
-        .price-row:last-child {
-            border-bottom: none;
-        }
-
-        .price-row strong {
-            color: #075e54;
-        }
-
-        .ask-price {
-            color: #087f5b;
-            font-weight: 800;
-            white-space: nowrap;
-        }
-
-        /* NEDEN BİZ */
-        .why {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 25px;
-        }
-
-        .why-card {
             background: white;
-            border-radius: 18px;
-            padding: 32px;
-            box-shadow: 0 8px 25px rgba(0,0,0,0.06);
-        }
-
-        .why-card h3 {
-            margin-top: 0;
-            color: #075e54;
-        }
-
-        .why-list {
-            list-style: none;
-            padding: 0;
-            margin: 20px 0 0;
-        }
-
-        .why-list li {
-            margin: 13px 0;
-            padding-left: 28px;
-            position: relative;
-        }
-
-        .why-list li::before {
-            content: "✓";
-            position: absolute;
-            left: 0;
-            color: #087f5b;
-            font-weight: 900;
-        }
-
-        /* BÖLGELER */
-        .area-box {
-            background: linear-gradient(135deg, #075e54, #087f5b);
-            color: white;
-            border-radius: 22px;
-            padding: 45px;
+            padding: 40px;
+            border-radius: 20px;
             text-align: center;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.07);
         }
 
-        .area-box h2 {
-            margin-top: 0;
+        .contact-box h3 {
+            font-size: 28px;
+            margin-bottom: 20px;
+            color: #0877d1;
         }
 
-        .area-list {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 10px;
-            margin-top: 25px;
+        .contact-info {
+            font-size: 19px;
+            margin-bottom: 25px;
         }
 
-        .area-list span {
-            background: rgba(255,255,255,0.14);
-            border: 1px solid rgba(255,255,255,0.2);
-            padding: 9px 15px;
-            border-radius: 50px;
+        .contact-info a {
+            color: #0877d1;
+            text-decoration: none;
+            font-weight: 700;
         }
 
-        /* CTA */
-        .cta {
-            text-align: center;
-            padding: 80px 20px;
-            background: #e7f7f1;
-        }
+        /* =========================
+           FOOTER
+        ========================= */
 
-        .cta h2 {
-            font-size: clamp(2rem, 4vw, 3rem);
-            margin: 0 0 12px;
-            color: #075e54;
-        }
-
-        .cta p {
-            color: #526266;
-            margin-bottom: 28px;
-        }
-
-        /* FOOTER */
         footer {
-            background: #172326;
-            color: #dce5e6;
-            text-align: center;
-            padding: 40px 20px;
-        }
-
-        footer strong {
+            background: #17324d;
             color: white;
-            font-size: 1.2rem;
+            text-align: center;
+            padding: 30px 20px;
         }
 
-        footer a {
-            color: #6ee7b7;
+        footer p {
+            margin: 5px 0;
         }
 
-        /* SABİT WHATSAPP */
+        /* =========================
+           WHATSAPP SABİT BUTON
+        ========================= */
+
         .floating-whatsapp {
             position: fixed;
-            right: 20px;
-            bottom: 20px;
-            z-index: 2000;
-            width: 62px;
-            height: 62px;
+            right: 22px;
+            bottom: 22px;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: #20d56a;
+            color: white;
+            text-decoration: none;
             display: flex;
             align-items: center;
             justify-content: center;
-            border-radius: 50%;
-            background: #25D366;
-            color: white;
-            font-size: 1.8rem;
-            box-shadow: 0 8px 25px rgba(0,0,0,0.25);
+            font-size: 30px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.25);
+            z-index: 9998;
         }
 
-        /* MOBİL */
-        @media (max-width: 800px) {
-            .nav-phone {
-                font-size: 0.9rem;
+        /* =========================
+           MOBİL
+        ========================= */
+
+        @media (max-width: 900px) {
+
+            .nav-container {
+                flex-direction: column;
+                padding: 15px;
+                gap: 12px;
             }
 
-            .quick-grid,
-            .services,
-            .why {
+            .nav-links {
+                gap: 18px;
+                flex-wrap: wrap;
+            }
+
+            .hero h1 {
+                font-size: 38px;
+            }
+
+            .hero p {
+                font-size: 18px;
+            }
+
+            .services {
                 grid-template-columns: 1fr;
             }
 
-            .hero {
-                padding: 75px 18px 85px;
-            }
-
-            section {
-                padding: 65px 0;
-            }
-
-            .price-row {
-                padding: 17px;
-                font-size: 0.95rem;
-            }
-
-            .area-box {
-                padding: 35px 20px;
+            .gallery {
+                grid-template-columns: 1fr;
             }
         }
 
-        @media (max-width: 520px) {
-            .nav-inner {
-                min-height: 62px;
-            }
+        @media (max-width: 500px) {
 
             .logo {
-                font-size: 1.05rem;
+                font-size: 21px;
             }
 
-            .nav-phone {
-                font-size: 0.82rem;
+            .nav-links {
+                gap: 12px;
             }
 
-            .buttons {
-                flex-direction: column;
+            .nav-links a {
+                font-size: 14px;
             }
 
-            .btn {
-                width: 100%;
+            .phone {
+                font-size: 14px;
             }
 
-            .floating-whatsapp {
-                width: 56px;
-                height: 56px;
-                right: 15px;
-                bottom: 15px;
+            .hero {
+                min-height: 420px;
+                padding: 50px 18px;
+            }
+
+            .hero h1 {
+                font-size: 32px;
+            }
+
+            .hero p {
+                font-size: 16px;
+            }
+
+            .section {
+                padding: 60px 18px;
+            }
+
+            .section-title h2 {
+                font-size: 30px;
+            }
+
+            .contact-box {
+                padding: 30px 20px;
             }
         }
     </style>
@@ -488,307 +414,361 @@
 
 <body>
 
-<nav>
-    <div class="container nav-inner">
-        <div class="logo">✨ Özfavori Koltuk Yıkama</div>
+    <!-- =========================
+         ÜST MENÜ
+    ========================= -->
 
-        <a class="nav-phone" href="tel:+905055984487">
-            📞 0505 598 44 87
-        </a>
-    </div>
-</nav>
+    <header class="navbar">
 
-<header class="hero">
-    <div class="hero-content">
+        <div class="nav-container">
 
-        <div class="hero-badge">
-            🧼 Profesyonel Yerinde Temizlik
-        </div>
-
-        <h1>Özfavori Koltuk Yıkama</h1>
-
-        <p>
-            Sarıyer ve İstanbul Avrupa Yakası'nda
-            koltuk, yatak, sandalye ve perde temizliği.
-        </p>
-
-        <div class="buttons">
-            <a
-                href="https://wa.me/905055984487?text=Merhaba%20Özfavori%20Koltuk%20Yıkama%2C%20fiyat%20bilgisi%20almak%20istiyorum."
-                class="btn btn-whatsapp"
-                target="_blank"
-                rel="noopener"
-            >
-                💬 WhatsApp'tan Fiyat Al
+            <a href="#anasayfa" class="logo">
+                <span>Özfavori</span> Koltuk Yıkama
             </a>
 
-            <a
-                href="tel:+905055984487"
-                class="btn btn-call"
-            >
-                📞 Hemen Ara
-            </a>
-        </div>
+            <nav class="nav-links">
 
-    </div>
-</header>
+                <a href="#anasayfa">Anasayfa</a>
 
-<div class="quick-info">
-    <div class="container quick-grid">
+                <a href="#hakkimizda">Hakkımızda</a>
 
-        <div class="quick-card">
-            <div class="quick-icon">🏠</div>
-            <strong>Yerinde Hizmet</strong>
-            <span>Adresinizde profesyonel temizlik</span>
-        </div>
+                <a href="#hizmetler">Hizmetler</a>
 
-        <div class="quick-card">
-            <div class="quick-icon">🧼</div>
-            <strong>Profesyonel Temizlik</strong>
-            <span>Kumaşa uygun temizlik uygulaması</span>
-        </div>
+                <a href="#galeri">Galeri</a>
 
-        <div class="quick-card">
-            <div class="quick-icon">📲</div>
-            <strong>Hızlı Randevu</strong>
-            <span>WhatsApp veya telefonla ulaşın</span>
-        </div>
+                <a href="#iletisim">İletişim</a>
 
-    </div>
-</div>
+            </nav>
 
-<section>
-    <div class="container">
-
-        <div class="section-title">
-            <h2>Hizmetlerimiz</h2>
-            <p>
-                Ev ve iş yerlerinizde ihtiyaç duyduğunuz profesyonel
-                temizlik hizmetlerini özenle gerçekleştiriyoruz.
-            </p>
-        </div>
-
-        <div class="services">
-
-            <div class="service-card">
-                <div class="service-icon">🛋️</div>
-                <h3>Koltuk Yıkama</h3>
-                <p>
-                    Koltuk kumaşına uygun yöntemlerle derinlemesine
-                    temizlik ve hijyen uygulaması.
-                </p>
-            </div>
-
-            <div class="service-card">
-                <div class="service-icon">🛏️</div>
-                <h3>Yatak Yıkama</h3>
-                <p>
-                    Çift ve tek kişilik yataklarınız için
-                    profesyonel temizlik hizmeti.
-                </p>
-            </div>
-
-            <div class="service-card">
-                <div class="service-icon">🪑</div>
-                <h3>Sandalye Yıkama</h3>
-                <p>
-                    Yemek masası sandalyeleri ve minderleriniz
-                    yerinde temizlenir.
-                </p>
-            </div>
-
-            <div class="service-card">
-                <div class="service-icon">🪟</div>
-                <h3>Stor Perde Temizliği</h3>
-                <p>
-                    Temizliğe uygun stor perdeleriniz için
-                    özenli yerinde temizlik hizmeti.
-                </p>
-            </div>
-
-            <div class="service-card">
-                <div class="service-icon">✨</div>
-                <h3>L Koltuk Temizliği</h3>
-                <p>
-                    L koltuklarınız için detaylı ve kumaşa uygun
-                    profesyonel temizlik.
-                </p>
-            </div>
-
-            <div class="service-card">
-                <div class="service-icon">🏢</div>
-                <h3>Ofis & İş Yeri</h3>
-                <p>
-                    Ofis koltukları, sandalyeler ve uygun tekstil
-                    yüzeyleri için temizlik hizmeti.
-                </p>
-            </div>
-
-        </div>
-    </div>
-</section>
-
-<section class="price-section">
-    <div class="container">
-
-        <div class="section-title">
-            <h2>Hizmet Fiyatları</h2>
-            <p>
-                Fiyatlar koltuk takımı, kumaş, ölçü ve hizmet kapsamına
-                göre değişebilir. Güncel fiyat için bize ulaşabilirsiniz.
-            </p>
-        </div>
-
-        <div class="price-box">
-
-            <div class="price-row">
-                <strong>L Koltuk Yıkama</strong>
-                <span class="ask-price">Fiyat Sorun →</span>
-            </div>
-
-            <div class="price-row">
-                <strong>7 Kişilik Koltuk Takımı</strong>
-                <span class="ask-price">Fiyat Sorun →</span>
-            </div>
-
-            <div class="price-row">
-                <strong>Çift Kişilik Yatak</strong>
-                <span class="ask-price">Fiyat Sorun →</span>
-            </div>
-
-            <div class="price-row">
-                <strong>Tek Kişilik Yatak</strong>
-                <span class="ask-price">Fiyat Sorun →</span>
-            </div>
-
-            <div class="price-row">
-                <strong>Sandalye</strong>
-                <span class="ask-price">Fiyat Sorun →</span>
-            </div>
-
-        </div>
-    </div>
-</section>
-
-<section>
-    <div class="container">
-
-        <div class="section-title">
-            <h2>Neden Özfavori?</h2>
-            <p>
-                Temizlikte amacımız yalnızca görünümü değil,
-                yaşam alanlarınızdaki hijyen hissini de iyileştirmek.
-            </p>
-        </div>
-
-        <div class="why">
-
-            <div class="why-card">
-                <h3>🧽 Özenli Temizlik</h3>
-
-                <ul class="why-list">
-                    <li>Kumaşa uygun temizlik yöntemleri</li>
-                    <li>Detaylı leke ve kir temizliği</li>
-                    <li>Profesyonel ekipman kullanımı</li>
-                    <li>Yerinde hizmet kolaylığı</li>
-                </ul>
-            </div>
-
-            <div class="why-card">
-                <h3>📲 Kolay İletişim</h3>
-
-                <ul class="why-list">
-                    <li>WhatsApp üzerinden hızlı iletişim</li>
-                    <li>Telefonla doğrudan ulaşım</li>
-                    <li>Randevu için kolay iletişim</li>
-                    <li>Sarıyer ve Avrupa Yakası'na servis</li>
-                </ul>
-            </div>
-
-        </div>
-    </div>
-</section>
-
-<section>
-    <div class="container">
-
-        <div class="area-box">
-            <h2>📍 Hizmet Bölgelerimiz</h2>
-
-            <p>
-                Başta Sarıyer olmak üzere İstanbul Avrupa Yakası'nda
-                birçok bölgeye hizmet veriyoruz.
-            </p>
-
-            <div class="area-list">
-                <span>Sarıyer</span>
-                <span>Beşiktaş</span>
-                <span>Şişli</span>
-                <span>Kağıthane</span>
-                <span>Eyüpsultan</span>
-                <span>Avrupa Yakası</span>
-            </div>
-        </div>
-
-    </div>
-</section>
-
-<section class="cta">
-    <div class="container">
-
-        <h2>Temiz Koltuklar İçin Bize Ulaşın</h2>
-
-        <p>
-            Koltuklarınızın fotoğrafını WhatsApp'tan gönderin,
-            hizmet ve fiyat bilgisi alın.
-        </p>
-
-        <div class="buttons">
-
-            <a
-                href="https://wa.me/905055984487?text=Merhaba%20Özfavori%20Koltuk%20Yıkama%2C%20fiyat%20bilgisi%20almak%20istiyorum."
-                class="btn btn-whatsapp"
-                target="_blank"
-                rel="noopener"
-            >
-                💬 WhatsApp'tan Yaz
-            </a>
-
-            <a
-                href="tel:+905055984487"
-                class="btn btn-call"
-            >
+            <a href="tel:+905055984487" class="phone">
                 📞 0505 598 44 87
             </a>
 
         </div>
 
-    </div>
-</section>
+    </header>
 
-<footer>
-    <strong>Özfavori Koltuk Yıkama</strong>
 
-    <p>
-        Sarıyer / İstanbul<br>
-        Telefon:
-        <a href="tel:+905055984487">0505 598 44 87</a>
-    </p>
+    <!-- =========================
+         ANASAYFA
+    ========================= -->
 
-    <p>
-        © 2026 Özfavori Koltuk Yıkama. Tüm hakları saklıdır.
-    </p>
-</footer>
+    <section id="anasayfa" class="hero">
 
-<a
-    class="floating-whatsapp"
-    href="https://wa.me/905055984487?text=Merhaba%20Özfavori%20Koltuk%20Yıkama%2C%20bilgi%20almak%20istiyorum."
-    target="_blank"
-    rel="noopener"
-    aria-label="WhatsApp ile iletişim"
->
-    💬
-</a>
+        <div class="hero-content">
+
+            <h1>
+                Özfavori <span>Koltuk Yıkama</span>
+            </h1>
+
+            <p>
+                Sarıyer ve İstanbul genelinde profesyonel yerinde temizlik
+            </p>
+
+            <a
+                class="whatsapp-btn"
+                href="https://wa.me/905055984487?text=Merhaba%20Özfavori%20Koltuk%20Yıkama%2C%20fiyat%20bilgisi%20almak%20istiyorum."
+                target="_blank"
+            >
+                💬 WhatsApp ile Hızlı Fiyat Al
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         HAKKIMIZDA
+    ========================= -->
+
+    <section id="hakkimizda" class="about">
+
+        <div class="section">
+
+            <div class="section-title">
+
+                <h2>Hakkımızda</h2>
+
+                <p>
+                    Profesyonel temizlik hizmeti
+                </p>
+
+                <div class="line"></div>
+
+            </div>
+
+            <div class="about-box">
+
+                <p>
+                    Özfavori Koltuk Yıkama olarak ev ve iş yerlerinizde
+                    profesyonel yerinde temizlik hizmeti sunuyoruz.
+                </p>
+
+                <p>
+                    Koltuk, sandalye, yatak ve araç koltuğu gibi
+                    farklı yüzeylerin temizliğini özenli şekilde gerçekleştiriyoruz.
+                </p>
+
+                <p>
+                    İstanbul genelinde müşterilerimize hızlı ve
+                    güvenilir hizmet sunmayı hedefliyoruz.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         HİZMETLER
+    ========================= -->
+
+    <section id="hizmetler">
+
+        <div class="section">
+
+            <div class="section-title">
+
+                <h2>Hizmetlerimiz</h2>
+
+                <p>
+                    İhtiyacınıza uygun profesyonel temizlik
+                </p>
+
+                <div class="line"></div>
+
+            </div>
+
+
+            <div class="services">
+
+                <div class="service-card">
+
+                    <div class="service-icon">🛋️</div>
+
+                    <h3>Koltuk Yıkama</h3>
+
+                    <p>
+                        Koltuklarınızı yerinde profesyonel ekipmanlarla temizliyoruz.
+                    </p>
+
+                </div>
+
+
+                <div class="service-card">
+
+                    <div class="service-icon">🪑</div>
+
+                    <h3>Sandalye Yıkama</h3>
+
+                    <p>
+                        Kumaş sandalye ve oturma gruplarının detaylı temizliği.
+                    </p>
+
+                </div>
+
+
+                <div class="service-card">
+
+                    <div class="service-icon">🛏️</div>
+
+                    <h3>Yatak Yıkama</h3>
+
+                    <p>
+                        Yatak yüzeylerinde profesyonel temizlik hizmeti.
+                    </p>
+
+                </div>
+
+
+                <div class="service-card">
+
+                    <div class="service-icon">🚗</div>
+
+                    <h3>Araç Koltuğu</h3>
+
+                    <p>
+                        Araç koltukları ve kumaş yüzeylerin temizliği.
+                    </p>
+
+                </div>
+
+
+                <div class="service-card">
+
+                    <div class="service-icon">🛋️</div>
+
+                    <h3>Köşe Takımı</h3>
+
+                    <p>
+                        Köşe takımlarınıza yerinde detaylı temizlik hizmeti.
+                    </p>
+
+                </div>
+
+
+                <div class="service-card">
+
+                    <div class="service-icon">✨</div>
+
+                    <h3>Detaylı Temizlik</h3>
+
+                    <p>
+                        Kumaş yüzeylerde kapsamlı ve özenli temizlik.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         GALERİ
+    ========================= -->
+
+    <section id="galeri">
+
+        <div class="section">
+
+            <div class="section-title">
+
+                <h2>Galeri</h2>
+
+                <p>
+                    Gerçek hizmet fotoğraflarımızı yakında burada görebilirsiniz.
+                </p>
+
+                <div class="line"></div>
+
+            </div>
+
+
+            <div class="gallery">
+
+                <div class="gallery-item">
+                    🛋️
+                </div>
+
+                <div class="gallery-item">
+                    🧼
+                </div>
+
+                <div class="gallery-item">
+                    ✨
+                </div>
+
+                <div class="gallery-item">
+                    🪑
+                </div>
+
+                <div class="gallery-item">
+                    🛏️
+                </div>
+
+                <div class="gallery-item">
+                    🚗
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         İLETİŞİM
+    ========================= -->
+
+    <section id="iletisim" class="contact-section">
+
+        <div class="section">
+
+            <div class="section-title">
+
+                <h2>İletişim</h2>
+
+                <p>
+                    Fiyat almak veya randevu oluşturmak için bize ulaşabilirsiniz.
+                </p>
+
+                <div class="line"></div>
+
+            </div>
+
+
+            <div class="contact-box">
+
+                <h3>Özfavori Koltuk Yıkama</h3>
+
+                <div class="contact-info">
+
+                    📞
+                    <a href="tel:+905055984487">
+                        0505 598 44 87
+                    </a>
+
+                    <br><br>
+
+                    💬
+                    <a
+                        href="https://wa.me/905055984487?text=Merhaba%20Özfavori%20Koltuk%20Yıkama%2C%20fiyat%20bilgisi%20almak%20istiyorum."
+                        target="_blank"
+                    >
+                        WhatsApp'tan Yaz
+                    </a>
+
+                </div>
+
+                <a
+                    class="whatsapp-btn"
+                    href="https://wa.me/905055984487?text=Merhaba%20Özfavori%20Koltuk%20Yıkama%2C%20randevu%20almak%20istiyorum."
+                    target="_blank"
+                >
+                    💬 WhatsApp'tan Randevu Al
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         FOOTER
+    ========================= -->
+
+    <footer>
+
+        <p>
+            © 2026 Özfavori Koltuk Yıkama
+        </p>
+
+        <p>
+            İstanbul Genelinde Profesyonel Temizlik Hizmeti
+        </p>
+
+    </footer>
+
+
+    <!-- SABİT WHATSAPP -->
+
+    <a
+        href="https://wa.me/905055984487?text=Merhaba%20Özfavori%20Koltuk%20Yıkama%2C%20bilgi%20almak%20istiyorum."
+        class="floating-whatsapp"
+        target="_blank"
+        aria-label="WhatsApp"
+    >
+        💬
+    </a>
 
 </body>
 </html>
