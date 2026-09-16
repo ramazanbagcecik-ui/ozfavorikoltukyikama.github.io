@@ -7,9 +7,10 @@
     <title>Özfavori Koltuk Yıkama | İstanbul</title>
 
     <meta name="description"
-          content="Özfavori Koltuk Yıkama - İstanbul genelinde profesyonel yerinde koltuk, sandalye, yatak ve araç koltuğu temizliği.">
+          content="Özfavori Koltuk Yıkama - İstanbul genelinde profesyonel yerinde koltuk yıkama ve temizlik hizmeti.">
 
     <style>
+
         * {
             margin: 0;
             padding: 0;
@@ -24,7 +25,6 @@
             font-family: Arial, Helvetica, sans-serif;
             background: #f7fafc;
             color: #17324d;
-            line-height: 1.6;
         }
 
         /* =========================
@@ -37,13 +37,13 @@
             position: sticky;
             top: 0;
             z-index: 9999;
-            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
+            box-shadow: 0 2px 15px rgba(0,0,0,0.10);
         }
 
         .nav-container {
-            max-width: 1200px;
-            margin: auto;
+            max-width: 1250px;
             min-height: 78px;
+            margin: auto;
             padding: 0 25px;
 
             display: flex;
@@ -54,7 +54,7 @@
 
         .logo {
             text-decoration: none;
-            font-size: 24px;
+            font-size: 23px;
             font-weight: 800;
             color: #159447;
             white-space: nowrap;
@@ -91,38 +91,46 @@
         }
 
         /* =========================
-           HERO
+           ANA RESİM
         ========================= */
 
-        .hero {
-            min-height: 470px;
-            background: linear-gradient(135deg, #168be0, #1769b5);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            color: white;
-            padding: 70px 20px;
+        .hero-image {
+            width: 100%;
+            overflow: hidden;
+            background: #ffffff;
         }
+
+        .hero-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+            object-fit: cover;
+        }
+
+        /* =========================
+           ANASAYFA YAZI ALANI
+        ========================= */
 
         .hero-content {
-            max-width: 900px;
+            background: #ffffff;
+            text-align: center;
+            padding: 45px 20px 55px;
         }
 
-        .hero h1 {
-            font-size: 52px;
-            line-height: 1.15;
-            margin-bottom: 20px;
-            font-weight: 800;
+        .hero-content h1 {
+            font-size: 42px;
+            color: #17324d;
+            margin-bottom: 15px;
         }
 
-        .hero h1 span {
-            color: #72e35a;
+        .hero-content h1 span {
+            color: #159447;
         }
 
-        .hero p {
-            font-size: 21px;
-            margin-bottom: 35px;
+        .hero-content p {
+            font-size: 19px;
+            color: #60758a;
+            margin-bottom: 25px;
         }
 
         .whatsapp-btn {
@@ -130,21 +138,21 @@
             background: #20d56a;
             color: white;
             text-decoration: none;
-            padding: 16px 30px;
+            padding: 15px 30px;
             border-radius: 40px;
             font-size: 18px;
             font-weight: 800;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.18);
+            box-shadow: 0 7px 20px rgba(0,0,0,0.15);
             transition: 0.25s;
         }
 
         .whatsapp-btn:hover {
-            transform: translateY(-3px);
             background: #16bd59;
+            transform: translateY(-3px);
         }
 
         /* =========================
-           GENEL BÖLÜM
+           GENEL BÖLÜMLER
         ========================= */
 
         section {
@@ -159,26 +167,47 @@
 
         .section-title {
             text-align: center;
-            margin-bottom: 50px;
+            margin-bottom: 45px;
         }
 
         .section-title h2 {
             font-size: 38px;
             color: #17324d;
-            margin-bottom: 12px;
+            margin-bottom: 10px;
         }
 
         .section-title p {
-            color: #60758a;
             font-size: 17px;
+            color: #60758a;
         }
 
         .line {
             width: 65px;
             height: 5px;
-            background: #168be0;
+            background: #0877d1;
             margin: 15px auto 0;
             border-radius: 10px;
+        }
+
+        /* =========================
+           HAKKIMIZDA
+        ========================= */
+
+        .about {
+            background: #f2f8fc;
+        }
+
+        .about-box {
+            max-width: 900px;
+            margin: auto;
+            text-align: center;
+        }
+
+        .about-box p {
+            font-size: 18px;
+            color: #52697d;
+            line-height: 1.8;
+            margin-bottom: 18px;
         }
 
         /* =========================
@@ -192,7 +221,7 @@
         }
 
         .service-card {
-            background: white;
+            background: #ffffff;
             padding: 35px 25px;
             border-radius: 18px;
             text-align: center;
@@ -202,6 +231,7 @@
 
         .service-card:hover {
             transform: translateY(-6px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.10);
         }
 
         .service-icon {
@@ -211,32 +241,13 @@
 
         .service-card h3 {
             color: #0877d1;
-            font-size: 23px;
+            font-size: 22px;
             margin-bottom: 10px;
         }
 
         .service-card p {
             color: #60758a;
-        }
-
-        /* =========================
-           HAKKIMIZDA
-        ========================= */
-
-        .about {
-            background: white;
-        }
-
-        .about-box {
-            max-width: 900px;
-            margin: auto;
-            text-align: center;
-        }
-
-        .about-box p {
-            font-size: 18px;
-            color: #52697d;
-            margin-bottom: 18px;
+            line-height: 1.6;
         }
 
         /* =========================
@@ -252,7 +263,7 @@
         .gallery-item {
             height: 220px;
             border-radius: 16px;
-            background: linear-gradient(135deg, #e9f5ff, #dff7e7);
+            background: linear-gradient(135deg, #e9f5ff, #e1f7e8);
             display: flex;
             align-items: center;
             justify-content: center;
@@ -271,8 +282,8 @@
         .contact-box {
             max-width: 800px;
             margin: auto;
-            background: white;
-            padding: 40px;
+            background: #ffffff;
+            padding: 45px 30px;
             border-radius: 20px;
             text-align: center;
             box-shadow: 0 5px 20px rgba(0,0,0,0.07);
@@ -280,12 +291,13 @@
 
         .contact-box h3 {
             font-size: 28px;
-            margin-bottom: 20px;
             color: #0877d1;
+            margin-bottom: 20px;
         }
 
         .contact-info {
             font-size: 19px;
+            line-height: 1.8;
             margin-bottom: 25px;
         }
 
@@ -311,24 +323,30 @@
         }
 
         /* =========================
-           WHATSAPP SABİT BUTON
+           SABİT WHATSAPP
         ========================= */
 
         .floating-whatsapp {
             position: fixed;
             right: 22px;
             bottom: 22px;
+
             width: 60px;
             height: 60px;
+
             border-radius: 50%;
             background: #20d56a;
             color: white;
-            text-decoration: none;
+
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 30px;
+
+            text-decoration: none;
+            font-size: 29px;
+
             box-shadow: 0 5px 20px rgba(0,0,0,0.25);
+
             z-index: 9998;
         }
 
@@ -349,12 +367,8 @@
                 flex-wrap: wrap;
             }
 
-            .hero h1 {
-                font-size: 38px;
-            }
-
-            .hero p {
-                font-size: 18px;
+            .hero-content h1 {
+                font-size: 34px;
             }
 
             .services {
@@ -384,16 +398,20 @@
                 font-size: 14px;
             }
 
-            .hero {
-                min-height: 420px;
-                padding: 50px 18px;
+            .hero-image img {
+                min-height: 250px;
+                object-fit: cover;
             }
 
-            .hero h1 {
-                font-size: 32px;
+            .hero-content {
+                padding: 35px 18px 45px;
             }
 
-            .hero p {
+            .hero-content h1 {
+                font-size: 30px;
+            }
+
+            .hero-content p {
                 font-size: 16px;
             }
 
@@ -409,10 +427,12 @@
                 padding: 30px 20px;
             }
         }
+
     </style>
 </head>
 
 <body>
+
 
     <!-- =========================
          ÜST MENÜ
@@ -428,15 +448,25 @@
 
             <nav class="nav-links">
 
-                <a href="#anasayfa">Anasayfa</a>
+                <a href="#anasayfa">
+                    Anasayfa
+                </a>
 
-                <a href="#hakkimizda">Hakkımızda</a>
+                <a href="#hakkimizda">
+                    Hakkımızda
+                </a>
 
-                <a href="#hizmetler">Hizmetler</a>
+                <a href="#hizmetler">
+                    Hizmetler
+                </a>
 
-                <a href="#galeri">Galeri</a>
+                <a href="#galeri">
+                    Galeri
+                </a>
 
-                <a href="#iletisim">İletişim</a>
+                <a href="#iletisim">
+                    İletişim
+                </a>
 
             </nav>
 
@@ -450,32 +480,44 @@
 
 
     <!-- =========================
-         ANASAYFA
+         ANA RESİM
+         GitHub'daki dosya:
+         anaresim.png
     ========================= -->
 
-    <section id="anasayfa" class="hero">
+    <section id="anasayfa" class="hero-image">
 
-        <div class="hero-content">
-
-            <h1>
-                Özfavori <span>Koltuk Yıkama</span>
-            </h1>
-
-            <p>
-                Sarıyer ve İstanbul genelinde profesyonel yerinde temizlik
-            </p>
-
-            <a
-                class="whatsapp-btn"
-                href="https://wa.me/905055984487?text=Merhaba%20Özfavori%20Koltuk%20Yıkama%2C%20fiyat%20bilgisi%20almak%20istiyorum."
-                target="_blank"
-            >
-                💬 WhatsApp ile Hızlı Fiyat Al
-            </a>
-
-        </div>
+        <img
+            src="anaresim.png"
+            alt="Özfavori Koltuk Yıkama profesyonel temizlik"
+        >
 
     </section>
+
+
+    <!-- =========================
+         ANA SAYFA YAZILARI
+    ========================= -->
+
+    <div class="hero-content">
+
+        <h1>
+            Özfavori <span>Koltuk Yıkama</span>
+        </h1>
+
+        <p>
+            Sarıyer ve İstanbul genelinde profesyonel yerinde temizlik
+        </p>
+
+        <a
+            class="whatsapp-btn"
+            href="https://wa.me/905055984487?text=Merhaba%20Özfavori%20Koltuk%20Yıkama%2C%20fiyat%20bilgisi%20almak%20istiyorum."
+            target="_blank"
+        >
+            💬 WhatsApp ile Hızlı Fiyat Al
+        </a>
+
+    </div>
 
 
     <!-- =========================
@@ -491,7 +533,7 @@
                 <h2>Hakkımızda</h2>
 
                 <p>
-                    Profesyonel temizlik hizmeti
+                    Özfavori Koltuk Yıkama
                 </p>
 
                 <div class="line"></div>
@@ -506,13 +548,13 @@
                 </p>
 
                 <p>
-                    Koltuk, sandalye, yatak ve araç koltuğu gibi
-                    farklı yüzeylerin temizliğini özenli şekilde gerçekleştiriyoruz.
+                    Koltuk, sandalye, yatak, köşe takımı ve araç koltuğu
+                    gibi farklı yüzeylerin temizliğini gerçekleştiriyoruz.
                 </p>
 
                 <p>
                     İstanbul genelinde müşterilerimize hızlı ve
-                    güvenilir hizmet sunmayı hedefliyoruz.
+                    özenli hizmet sunmayı hedefliyoruz.
                 </p>
 
             </div>
@@ -535,7 +577,7 @@
                 <h2>Hizmetlerimiz</h2>
 
                 <p>
-                    İhtiyacınıza uygun profesyonel temizlik
+                    Profesyonel temizlik hizmetlerimiz
                 </p>
 
                 <div class="line"></div>
@@ -545,14 +587,20 @@
 
             <div class="services">
 
+
                 <div class="service-card">
 
-                    <div class="service-icon">🛋️</div>
+                    <div class="service-icon">
+                        🛋️
+                    </div>
 
-                    <h3>Koltuk Yıkama</h3>
+                    <h3>
+                        Koltuk Yıkama
+                    </h3>
 
                     <p>
-                        Koltuklarınızı yerinde profesyonel ekipmanlarla temizliyoruz.
+                        Koltuklarınızı yerinde profesyonel
+                        ekipmanlarla temizliyoruz.
                     </p>
 
                 </div>
@@ -560,12 +608,17 @@
 
                 <div class="service-card">
 
-                    <div class="service-icon">🪑</div>
+                    <div class="service-icon">
+                        🪑
+                    </div>
 
-                    <h3>Sandalye Yıkama</h3>
+                    <h3>
+                        Sandalye Yıkama
+                    </h3>
 
                     <p>
-                        Kumaş sandalye ve oturma gruplarının detaylı temizliği.
+                        Kumaş sandalye ve oturma gruplarının
+                        detaylı temizliği.
                     </p>
 
                 </div>
@@ -573,12 +626,17 @@
 
                 <div class="service-card">
 
-                    <div class="service-icon">🛏️</div>
+                    <div class="service-icon">
+                        🛏️
+                    </div>
 
-                    <h3>Yatak Yıkama</h3>
+                    <h3>
+                        Yatak Yıkama
+                    </h3>
 
                     <p>
-                        Yatak yüzeylerinde profesyonel temizlik hizmeti.
+                        Yatak yüzeylerinde profesyonel
+                        temizlik hizmeti.
                     </p>
 
                 </div>
@@ -586,12 +644,17 @@
 
                 <div class="service-card">
 
-                    <div class="service-icon">🚗</div>
+                    <div class="service-icon">
+                        🚗
+                    </div>
 
-                    <h3>Araç Koltuğu</h3>
+                    <h3>
+                        Araç Koltuğu
+                    </h3>
 
                     <p>
-                        Araç koltukları ve kumaş yüzeylerin temizliği.
+                        Araç koltukları ve kumaş yüzeylerin
+                        temizliği.
                     </p>
 
                 </div>
@@ -599,12 +662,17 @@
 
                 <div class="service-card">
 
-                    <div class="service-icon">🛋️</div>
+                    <div class="service-icon">
+                        🛋️
+                    </div>
 
-                    <h3>Köşe Takımı</h3>
+                    <h3>
+                        Köşe Takımı
+                    </h3>
 
                     <p>
-                        Köşe takımlarınıza yerinde detaylı temizlik hizmeti.
+                        Köşe takımlarınıza yerinde detaylı
+                        temizlik hizmeti.
                     </p>
 
                 </div>
@@ -612,15 +680,21 @@
 
                 <div class="service-card">
 
-                    <div class="service-icon">✨</div>
+                    <div class="service-icon">
+                        ✨
+                    </div>
 
-                    <h3>Detaylı Temizlik</h3>
+                    <h3>
+                        Detaylı Temizlik
+                    </h3>
 
                     <p>
-                        Kumaş yüzeylerde kapsamlı ve özenli temizlik.
+                        Kumaş yüzeylerde kapsamlı ve
+                        özenli temizlik.
                     </p>
 
                 </div>
+
 
             </div>
 
@@ -642,7 +716,7 @@
                 <h2>Galeri</h2>
 
                 <p>
-                    Gerçek hizmet fotoğraflarımızı yakında burada görebilirsiniz.
+                    Hizmetlerimizden görüntüler
                 </p>
 
                 <div class="line"></div>
@@ -696,7 +770,7 @@
                 <h2>İletişim</h2>
 
                 <p>
-                    Fiyat almak veya randevu oluşturmak için bize ulaşabilirsiniz.
+                    Fiyat ve randevu için bize ulaşabilirsiniz.
                 </p>
 
                 <div class="line"></div>
@@ -706,7 +780,9 @@
 
             <div class="contact-box">
 
-                <h3>Özfavori Koltuk Yıkama</h3>
+                <h3>
+                    Özfavori Koltuk Yıkama
+                </h3>
 
                 <div class="contact-info">
 
@@ -715,17 +791,18 @@
                         0505 598 44 87
                     </a>
 
-                    <br><br>
+                    <br>
 
                     💬
                     <a
-                        href="https://wa.me/905055984487?text=Merhaba%20Özfavori%20Koltuk%20Yıkama%2C%20fiyat%20bilgisi%20almak%20istiyorum."
+                        href="https://wa.me/905055984487?text=Merhaba%20Özfavori%20Koltuk%20Yıkama%2C%20bilgi%20almak%20istiyorum."
                         target="_blank"
                     >
                         WhatsApp'tan Yaz
                     </a>
 
                 </div>
+
 
                 <a
                     class="whatsapp-btn"
@@ -759,7 +836,9 @@
     </footer>
 
 
-    <!-- SABİT WHATSAPP -->
+    <!-- =========================
+         SABİT WHATSAPP
+    ========================= -->
 
     <a
         href="https://wa.me/905055984487?text=Merhaba%20Özfavori%20Koltuk%20Yıkama%2C%20bilgi%20almak%20istiyorum."
@@ -769,6 +848,7 @@
     >
         💬
     </a>
+
 
 </body>
 </html>
