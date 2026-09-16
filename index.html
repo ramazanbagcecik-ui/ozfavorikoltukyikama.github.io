@@ -1,825 +1,783 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Özfavori Koltuk Yıkama | Sarıyer ve İstanbul</title>
-
-    <meta name="description" content="Özfavori Koltuk Yıkama - Sarıyer ve İstanbul genelinde profesyonel yerinde koltuk, sandalye, yatak, araç, ofis halıflex ve cam temizleme hizmetleri.">
-
-    <style>
-        *{
-            margin:0;
-            padding:0;
-            box-sizing:border-box;
-        }
-
-        html{
-            scroll-behavior:smooth;
-        }
-
-        body{
-            font-family:Arial, Helvetica, sans-serif;
-            color:#1f2937;
-            background:#ffffff;
-            line-height:1.6;
-        }
-
-        a{
-            text-decoration:none;
-            color:inherit;
-        }
-
-        img{
-            max-width:100%;
-            display:block;
-        }
-
-        /* =========================
-           HEADER
-        ========================== */
-
-        header{
-            position:sticky;
-            top:0;
-            z-index:1000;
-            background:rgba(255,255,255,.97);
-            box-shadow:0 2px 15px rgba(0,0,0,.08);
-            backdrop-filter:blur(10px);
-        }
-
-        .nav{
-            max-width:1200px;
-            margin:auto;
-            min-height:90px;
-            padding:0 25px;
-            display:flex;
-            align-items:center;
-            justify-content:space-between;
-            gap:20px;
-        }
-
-        .logo{
-            display:flex;
-            align-items:center;
-        }
-
-        /* LOGO BÜYÜTÜLDÜ */
-        .logo img{
-            height:70px;
-            width:auto;
-            object-fit:contain;
-        }
-
-        .menu{
-            display:flex;
-            align-items:center;
-            gap:28px;
-        }
-
-        .menu a{
-            font-size:15px;
-            font-weight:600;
-            color:#263238;
-            transition:.25s;
-        }
-
-        .menu a:hover{
-            color:#168be0;
-        }
-
-        .header-phone{
-            display:flex;
-            align-items:center;
-            gap:8px;
-            color:#168be0;
-            font-weight:700;
-            white-space:nowrap;
-        }
-
-        /* =========================
-           HERO
-        ========================== */
-
-        .hero{
-            min-height:650px;
-            background-image:
-                linear-gradient(rgba(5,35,55,.55),rgba(5,35,55,.55)),
-                url('anaresim.png');
-            background-size:cover;
-            background-position:center;
-            display:flex;
-            align-items:center;
-            position:relative;
-        }
-
-        .hero-content{
-            width:100%;
-            max-width:1200px;
-            margin:auto;
-            padding:80px 25px;
-            display:flex;
-            align-items:center;
-            justify-content:space-between;
-            gap:50px;
-        }
-
-        .hero-text{
-            max-width:720px;
-            color:white;
-        }
-
-        .hero-label{
-            display:inline-block;
-            background:rgba(255,255,255,.15);
-            border:1px solid rgba(255,255,255,.35);
-            padding:9px 16px;
-            border-radius:30px;
-            font-size:14px;
-            font-weight:600;
-            margin-bottom:20px;
-            backdrop-filter:blur(5px);
-        }
-
-        .hero h1{
-            font-size:58px;
-            line-height:1.1;
-            margin-bottom:20px;
-            letter-spacing:-1px;
-        }
-
-        .hero p{
-            font-size:20px;
-            max-width:680px;
-            margin-bottom:30px;
-            color:#f5f5f5;
-        }
-
-        .hero-buttons{
-            display:flex;
-            align-items:center;
-            gap:15px;
-            flex-wrap:wrap;
-        }
-
-        .btn{
-            display:inline-flex;
-            align-items:center;
-            justify-content:center;
-            gap:10px;
-            padding:15px 24px;
-            border-radius:12px;
-            font-weight:700;
-            transition:.25s;
-            border:none;
-            cursor:pointer;
-        }
-
-        .btn-whatsapp{
-            background:#20b85a;
-            color:white;
-            box-shadow:0 8px 25px rgba(32,184,90,.3);
-        }
-
-        .btn-whatsapp:hover{
-            transform:translateY(-2px);
-            background:#1aa64f;
-        }
-
-        .btn-outline{
-            border:1px solid rgba(255,255,255,.6);
-            color:white;
-            background:rgba(255,255,255,.08);
-        }
-
-        .btn-outline:hover{
-            background:white;
-            color:#168be0;
-        }
-
-        .wa-icon{
-            width:25px;
-            height:25px;
-            display:block;
-            flex-shrink:0;
-        }
-
-        .wa-icon svg{
-            width:100%;
-            height:100%;
-            display:block;
-            fill:currentColor;
-        }
-
-        .natural-badge{
-            width:230px;
-            height:230px;
-            border-radius:50%;
-            background:rgba(255,255,255,.93);
-            display:flex;
-            flex-direction:column;
-            align-items:center;
-            justify-content:center;
-            text-align:center;
-            box-shadow:0 20px 50px rgba(0,0,0,.2);
-            color:#168be0;
-            flex-shrink:0;
-        }
-
-        .natural-badge .leaf{
-            font-size:48px;
-            margin-bottom:5px;
-        }
-
-        .natural-badge strong{
-            font-size:20px;
-        }
-
-        .natural-badge span{
-            font-size:13px;
-            color:#64748b;
-            margin-top:5px;
-        }
-
-        /* =========================
-           FEATURES
-        ========================== */
-
-        .features{
-            max-width:1200px;
-            margin:-55px auto 0;
-            position:relative;
-            z-index:5;
-            padding:0 25px;
-            display:grid;
-            grid-template-columns:repeat(3,1fr);
-            gap:20px;
-        }
-
-        .feature{
-            background:white;
-            border-radius:20px;
-            padding:25px;
-            display:flex;
-            align-items:center;
-            gap:18px;
-            box-shadow:0 10px 35px rgba(0,0,0,.10);
-            transition:.25s;
-        }
-
-        .feature:hover{
-            transform:translateY(-4px);
-        }
-
-        .feature-icon{
-            width:64px;
-            height:64px;
-            min-width:64px;
-            border-radius:18px;
-            background:linear-gradient(145deg,#eef8ff,#eaf8f1);
-            border:1px solid #dceef2;
-            display:flex;
-            align-items:center;
-            justify-content:center;
-            color:#168be0;
-            box-shadow:0 6px 16px rgba(22,139,224,.08);
-            transition:.25s;
-        }
-
-        .feature:hover .feature-icon{
-            transform:translateY(-3px);
-            box-shadow:0 9px 20px rgba(22,139,224,.14);
-        }
-
-        .feature-icon svg{
-            width:32px;
-            height:32px;
-            display:block;
-            fill:none;
-            stroke:currentColor;
-            stroke-width:1.8;
-            stroke-linecap:round;
-            stroke-linejoin:round;
-        }
-
-        .feature:nth-child(2) .feature-icon{
-            color:#20a85a;
-            background:linear-gradient(145deg,#effbf5,#e8f8ef);
-        }
-
-        .feature:nth-child(3) .feature-icon{
-            color:#168be0;
-            background:linear-gradient(145deg,#eef7ff,#edf8fb);
-        }
-
-        .feature h3{
-            font-size:18px;
-            margin-bottom:4px;
-        }
-
-        .feature p{
-            font-size:14px;
-            color:#64748b;
-        }
-
-        /* =========================
-           GENERAL SECTIONS
-        ========================== */
-
-        section{
-            padding:90px 25px;
-        }
-
-        .container{
-            max-width:1200px;
-            margin:auto;
-        }
-
-        .section-title{
-            text-align:center;
-            margin-bottom:50px;
-        }
-
-        .section-title span{
-            color:#168be0;
-            font-size:14px;
-            font-weight:800;
-            text-transform:uppercase;
-            letter-spacing:1.5px;
-        }
-
-        .section-title h2{
-            font-size:40px;
-            margin:8px 0 12px;
-            color:#162b3a;
-        }
-
-        .section-title p{
-            max-width:650px;
-            margin:auto;
-            color:#64748b;
-        }
-
-        /* =========================
-           ABOUT
-        ========================== */
-
-        .about{
-            background:#f8fbfd;
-        }
-
-        .about-content{
-            max-width:900px;
-            margin:auto;
-            text-align:center;
-        }
-
-        .about-content p{
-            font-size:17px;
-            color:#536575;
-            margin-bottom:15px;
-        }
-
-        .about-highlight{
-            margin-top:30px;
-            display:inline-block;
-            padding:15px 25px;
-            background:white;
-            border-radius:15px;
-            box-shadow:0 8px 25px rgba(0,0,0,.07);
-            color:#168be0;
-            font-weight:700;
-        }
-
-        /* =========================
-           SERVICES
-        ========================== */
-
-        .services{
-            background:white;
-        }
-
-        .services-grid{
-            display:grid;
-            grid-template-columns:repeat(3,1fr);
-            gap:25px;
-        }
-
-        .service-card{
-            background:white;
-            border:1px solid #e8eef2;
-            border-radius:20px;
-            overflow:hidden;
-            box-shadow:0 8px 25px rgba(0,0,0,.06);
-            transition:.3s;
-        }
-
-        .service-card:hover{
-            transform:translateY(-6px);
-            box-shadow:0 15px 35px rgba(0,0,0,.11);
-        }
-
-        .service-image{
-            width:100%;
-            height:230px;
-            background:#eef4f7;
-            overflow:hidden;
-        }
-
-        .service-image img{
-            width:100%;
-            height:100%;
-            object-fit:cover;
-            transition:.4s;
-        }
-
-        .service-card:hover .service-image img{
-            transform:scale(1.05);
-        }
-
-        .service-card h3{
-            padding:20px 20px 5px;
-            font-size:20px;
-            color:#1d3444;
-        }
-
-        .service-card p{
-            padding:0 20px 22px;
-            color:#687988;
-            font-size:14px;
-        }
-
-        /* =========================
-           GALLERY
-        ========================== */
-
-        .gallery{
-            background:#f8fbfd;
-        }
-
-        .gallery-grid{
-            display:grid;
-            grid-template-columns:repeat(3,1fr);
-            gap:20px;
-        }
-
-        .gallery-item{
-            height:240px;
-            border-radius:18px;
-            overflow:hidden;
-            background:#eaf1f5;
-            display:flex;
-            align-items:center;
-            justify-content:center;
-            color:#94a3b8;
-            font-weight:600;
-        }
-
-        /* =========================
-           CONTACT
-        ========================== */
-
-        .contact{
-            background:#102d3d;
-            color:white;
-        }
-
-        .contact .section-title h2{
-            color:white;
-        }
-
-        .contact .section-title p{
-            color:#c4d1d9;
-        }
-
-        .contact-grid{
-            display:grid;
-            grid-template-columns:repeat(3,1fr);
-            gap:20px;
-        }
-
-        .contact-box{
-            background:rgba(255,255,255,.08);
-            border:1px solid rgba(255,255,255,.1);
-            border-radius:18px;
-            padding:30px;
-            text-align:center;
-        }
-
-        .contact-box .icon{
-            width:55px;
-            height:55px;
-            margin:0 auto 15px;
-            border-radius:15px;
-            background:rgba(255,255,255,.1);
-            display:flex;
-            align-items:center;
-            justify-content:center;
-            font-size:25px;
-        }
-
-        .contact-box h3{
-            margin-bottom:8px;
-        }
-
-        .contact-box p{
-            color:#c8d4dc;
-        }
-
-        .contact-box a{
-            color:white;
-            font-weight:700;
-        }
-
-        .contact-button{
-            margin-top:35px;
-            text-align:center;
-        }
-
-        /* =========================
-           FOOTER
-        ========================== */
-
-        footer{
-            background:#09202c;
-            color:#aebdc6;
-            text-align:center;
-            padding:25px;
-            font-size:14px;
-        }
-
-        /* =========================
-           FLOATING WHATSAPP
-        ========================== */
-
-        .floating-whatsapp{
-            position:fixed;
-            right:22px;
-            bottom:22px;
-            width:58px;
-            height:58px;
-            border-radius:50%;
-            background:#20b85a;
-            color:white;
-            display:flex;
-            align-items:center;
-            justify-content:center;
-            box-shadow:0 8px 25px rgba(0,0,0,.25);
-            z-index:2000;
-            transition:.25s;
-        }
-
-        .floating-whatsapp:hover{
-            transform:scale(1.08);
-        }
-
-        .floating-whatsapp .wa-icon{
-            width:34px;
-            height:34px;
-        }
-
-        /* =========================
-           MOBILE
-        ========================== */
-
-        @media(max-width:900px){
-
-            .menu{
-                gap:15px;
-            }
-
-            .menu a{
-                font-size:13px;
-            }
-
-            .header-phone{
-                display:none;
-            }
-
-            .hero{
-                min-height:600px;
-            }
-
-            .hero-content{
-                flex-direction:column;
-                text-align:center;
-                justify-content:center;
-            }
-
-            .hero h1{
-                font-size:43px;
-            }
-
-            .hero p{
-                font-size:17px;
-            }
-
-            .hero-buttons{
-                justify-content:center;
-            }
-
-            .natural-badge{
-                width:170px;
-                height:170px;
-            }
-
-            .natural-badge .leaf{
-                font-size:35px;
-            }
-
-            .natural-badge strong{
-                font-size:17px;
-            }
-
-            .features{
-                grid-template-columns:1fr;
-                margin-top:25px;
-            }
-
-            .services-grid{
-                grid-template-columns:repeat(2,1fr);
-            }
-
-            .gallery-grid{
-                grid-template-columns:repeat(2,1fr);
-            }
-
-            .contact-grid{
-                grid-template-columns:1fr;
-            }
-        }
-
-        @media(max-width:600px){
-
-            .nav{
-                min-height:78px;
-                padding:0 15px;
-            }
-
-            /* MOBİLDE LOGO */
-            .logo img{
-                height:60px;
-            }
-
-            .menu{
-                gap:10px;
-            }
-
-            .menu a:nth-child(2),
-            .menu a:nth-child(3){
-                display:none;
-            }
-
-            .hero-content{
-                padding:70px 20px;
-            }
-
-            .hero h1{
-                font-size:36px;
-            }
-
-            .hero p{
-                font-size:16px;
-            }
-
-            .btn{
-                width:100%;
-            }
-
-            .hero-buttons{
-                width:100%;
-            }
-
-            section{
-                padding:70px 18px;
-            }
-
-            .section-title h2{
-                font-size:32px;
-            }
-
-            .services-grid{
-                grid-template-columns:1fr;
-            }
-
-            .gallery-grid{
-                grid-template-columns:1fr;
-            }
-
-            .service-image{
-                height:220px;
-            }
-
-            .floating-whatsapp{
-                width:55px;
-                height:55px;
-                right:16px;
-                bottom:16px;
-            }
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Özfavori Koltuk Yıkama | Sarıyer ve İstanbul</title>
+
+<meta name="description" content="Özfavori Koltuk Yıkama - Sarıyer ve İstanbul genelinde profesyonel yerinde koltuk, sandalye, yatak, araç, ofis halıflex ve cam temizleme hizmetleri.">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    color:#1f2937;
+    background:#fff;
+    line-height:1.6;
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+img{
+    max-width:100%;
+    display:block;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+header{
+    position:sticky;
+    top:0;
+    z-index:1000;
+    background:rgba(255,255,255,.97);
+    box-shadow:0 2px 15px rgba(0,0,0,.08);
+    backdrop-filter:blur(10px);
+}
+
+.nav{
+    max-width:1200px;
+    margin:auto;
+    min-height:90px;
+    padding:0 25px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:20px;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+}
+
+.logo img{
+    height:75px;
+    width:auto;
+    object-fit:contain;
+}
+
+.menu{
+    display:flex;
+    align-items:center;
+    gap:28px;
+}
+
+.menu a{
+    font-size:15px;
+    font-weight:600;
+    color:#263238;
+    transition:.25s;
+}
+
+.menu a:hover{
+    color:#168be0;
+}
+
+.header-phone{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    color:#168be0;
+    font-weight:700;
+    white-space:nowrap;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero{
+    min-height:650px;
+    background-image:
+        linear-gradient(rgba(5,35,55,.55),rgba(5,35,55,.55)),
+        url("./anaresim.png");
+    background-size:cover;
+    background-position:center;
+    display:flex;
+    align-items:center;
+    position:relative;
+}
+
+.hero-content{
+    width:100%;
+    max-width:1200px;
+    margin:auto;
+    padding:80px 25px;
+}
+
+.hero-text{
+    max-width:760px;
+    color:#fff;
+}
+
+.hero-label{
+    display:inline-block;
+    background:rgba(255,255,255,.15);
+    border:1px solid rgba(255,255,255,.35);
+    padding:9px 16px;
+    border-radius:30px;
+    font-size:14px;
+    font-weight:600;
+    margin-bottom:20px;
+    backdrop-filter:blur(5px);
+}
+
+.hero h1{
+    font-size:58px;
+    line-height:1.1;
+    margin-bottom:20px;
+    letter-spacing:-1px;
+}
+
+.hero p{
+    font-size:20px;
+    max-width:680px;
+    margin-bottom:30px;
+    color:#f5f5f5;
+}
+
+.hero-buttons{
+    display:flex;
+    align-items:center;
+    gap:15px;
+    flex-wrap:wrap;
+}
+
+.btn{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:10px;
+    padding:15px 24px;
+    border-radius:12px;
+    font-weight:700;
+    transition:.25s;
+    border:none;
+    cursor:pointer;
+}
+
+.btn-whatsapp{
+    background:#20b85a;
+    color:#fff;
+    box-shadow:0 8px 25px rgba(32,184,90,.3);
+}
+
+.btn-whatsapp:hover{
+    transform:translateY(-2px);
+    background:#1aa64f;
+}
+
+.btn-outline{
+    border:1px solid rgba(255,255,255,.6);
+    color:#fff;
+    background:rgba(255,255,255,.08);
+}
+
+.btn-outline:hover{
+    background:#fff;
+    color:#168be0;
+}
+
+.wa-icon{
+    width:25px;
+    height:25px;
+    display:block;
+    flex-shrink:0;
+}
+
+.wa-icon svg{
+    width:100%;
+    height:100%;
+    display:block;
+    fill:currentColor;
+}
+
+/* =========================
+   FEATURES
+========================= */
+
+.features{
+    max-width:1200px;
+    margin:-55px auto 0;
+    position:relative;
+    z-index:5;
+    padding:0 25px;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+.feature{
+    min-height:114px;
+    background:#fff;
+    border-radius:20px;
+    padding:25px;
+    display:flex;
+    align-items:center;
+    gap:18px;
+    box-shadow:0 10px 35px rgba(0,0,0,.10);
+    transition:.25s;
+}
+
+.feature:hover{
+    transform:translateY(-4px);
+}
+
+.feature-icon{
+    width:64px;
+    height:64px;
+    min-width:64px;
+    border-radius:18px;
+    background:linear-gradient(145deg,#eef8ff,#eaf8f1);
+    border:1px solid #dceef2;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:#168be0;
+    box-shadow:0 6px 16px rgba(22,139,224,.08);
+    transition:.25s;
+}
+
+.feature:hover .feature-icon{
+    transform:translateY(-3px);
+    box-shadow:0 9px 20px rgba(22,139,224,.14);
+}
+
+.feature-icon svg{
+    width:32px;
+    height:32px;
+    display:block;
+    fill:none;
+    stroke:currentColor;
+    stroke-width:1.8;
+    stroke-linecap:round;
+    stroke-linejoin:round;
+}
+
+.feature:nth-child(3) .feature-icon{
+    color:#168be0;
+    background:linear-gradient(145deg,#eef7ff,#edf8fb);
+}
+
+.feature:nth-child(2){
+    justify-content:center;
+    text-align:center;
+}
+
+.feature:nth-child(2) h3{
+    margin:0;
+}
+
+.feature h3{
+    font-size:18px;
+    margin-bottom:4px;
+}
+
+.feature p{
+    font-size:14px;
+    color:#64748b;
+}
+
+/* =========================
+   GENERAL
+========================= */
+
+section{
+    padding:90px 25px;
+}
+
+.container{
+    max-width:1200px;
+    margin:auto;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:50px;
+}
+
+.section-title span{
+    color:#168be0;
+    font-size:14px;
+    font-weight:800;
+    text-transform:uppercase;
+    letter-spacing:1.5px;
+}
+
+.section-title h2{
+    font-size:40px;
+    margin:8px 0 12px;
+    color:#162b3a;
+}
+
+.section-title p{
+    max-width:650px;
+    margin:auto;
+    color:#64748b;
+}
+
+/* =========================
+   ABOUT
+========================= */
+
+.about{
+    background:#f8fbfd;
+}
+
+.about-content{
+    max-width:900px;
+    margin:auto;
+    text-align:center;
+}
+
+.about-content p{
+    font-size:17px;
+    color:#536575;
+    margin-bottom:15px;
+}
+
+.about-highlight{
+    margin-top:30px;
+    display:inline-block;
+    padding:15px 25px;
+    background:#fff;
+    border-radius:15px;
+    box-shadow:0 8px 25px rgba(0,0,0,.07);
+    color:#168be0;
+    font-weight:700;
+}
+
+/* =========================
+   SERVICES
+========================= */
+
+.services{
+    background:#fff;
+}
+
+.services-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+}
+
+.service-card{
+    background:#fff;
+    border:1px solid #e8eef2;
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:0 8px 25px rgba(0,0,0,.06);
+    transition:.3s;
+}
+
+.service-card:hover{
+    transform:translateY(-6px);
+    box-shadow:0 15px 35px rgba(0,0,0,.11);
+}
+
+.service-image{
+    width:100%;
+    height:230px;
+    background:#eef4f7;
+    overflow:hidden;
+}
+
+.service-image img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    transition:.4s;
+}
+
+.service-card:hover .service-image img{
+    transform:scale(1.05);
+}
+
+.service-card h3{
+    padding:20px 20px 5px;
+    font-size:20px;
+    color:#1d3444;
+}
+
+.service-card p{
+    padding:0 20px 22px;
+    color:#687988;
+    font-size:14px;
+}
+
+/* =========================
+   GALLERY
+========================= */
+
+.gallery{
+    background:#f8fbfd;
+}
+
+.gallery-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+.gallery-item{
+    height:240px;
+    border-radius:18px;
+    overflow:hidden;
+    background:#eaf1f5;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:#94a3b8;
+    font-weight:600;
+}
+
+/* =========================
+   CONTACT
+========================= */
+
+.contact{
+    background:#102d3d;
+    color:#fff;
+}
+
+.contact .section-title h2{
+    color:#fff;
+}
+
+.contact .section-title p{
+    color:#c4d1d9;
+}
+
+.contact-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+.contact-box{
+    background:rgba(255,255,255,.08);
+    border:1px solid rgba(255,255,255,.1);
+    border-radius:18px;
+    padding:30px;
+    text-align:center;
+}
+
+.contact-box .icon{
+    width:55px;
+    height:55px;
+    margin:0 auto 15px;
+    border-radius:15px;
+    background:rgba(255,255,255,.1);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:25px;
+}
+
+.contact-box h3{
+    margin-bottom:8px;
+}
+
+.contact-box p{
+    color:#c8d4dc;
+}
+
+.contact-box a{
+    color:#fff;
+    font-weight:700;
+}
+
+.contact-button{
+    margin-top:35px;
+    text-align:center;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+    background:#09202c;
+    color:#aebdc6;
+    text-align:center;
+    padding:25px;
+    font-size:14px;
+}
+
+/* =========================
+   FLOATING WHATSAPP
+========================= */
+
+.floating-whatsapp{
+    position:fixed;
+    right:22px;
+    bottom:22px;
+    width:58px;
+    height:58px;
+    border-radius:50%;
+    background:#20b85a;
+    color:#fff;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    box-shadow:0 8px 25px rgba(0,0,0,.25);
+    z-index:2000;
+    transition:.25s;
+}
+
+.floating-whatsapp:hover{
+    transform:scale(1.08);
+}
+
+.floating-whatsapp .wa-icon{
+    width:34px;
+    height:34px;
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media(max-width:900px){
+
+    .menu{
+        gap:15px;
+    }
+
+    .menu a{
+        font-size:13px;
+    }
+
+    .header-phone{
+        display:none;
+    }
+
+    .hero{
+        min-height:600px;
+    }
+
+    .hero-content{
+        text-align:center;
+    }
+
+    .hero-text{
+        margin:auto;
+    }
+
+    .hero h1{
+        font-size:43px;
+    }
+
+    .hero p{
+        font-size:17px;
+        margin-left:auto;
+        margin-right:auto;
+    }
+
+    .hero-buttons{
+        justify-content:center;
+    }
+
+    .features{
+        grid-template-columns:1fr;
+        margin-top:25px;
+    }
+
+    .services-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .gallery-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .contact-grid{
+        grid-template-columns:1fr;
+    }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:600px){
+
+    .nav{
+        min-height:78px;
+        padding:0 15px;
+    }
+
+    .logo img{
+        height:60px;
+    }
+
+    .menu{
+        gap:10px;
+    }
+
+    .menu a:nth-child(2),
+    .menu a:nth-child(3){
+        display:none;
+    }
+
+    .hero{
+        min-height:570px;
+    }
+
+    .hero-content{
+        padding:70px 20px;
+    }
+
+    .hero h1{
+        font-size:36px;
+    }
+
+    .hero p{
+        font-size:16px;
+    }
+
+    .btn{
+        width:100%;
+    }
+
+    .hero-buttons{
+        width:100%;
+    }
+
+    section{
+        padding:70px 18px;
+    }
+
+    .section-title h2{
+        font-size:32px;
+    }
+
+    .services-grid{
+        grid-template-columns:1fr;
+    }
+
+    .gallery-grid{
+        grid-template-columns:1fr;
+    }
+
+    .service-image{
+        height:220px;
+    }
+
+    .floating-whatsapp{
+        width:55px;
+        height:55px;
+        right:16px;
+        bottom:16px;
+    }
+}
+</style>
 </head>
 
 <body>
 
 <!-- =========================
      HEADER
-========================== -->
+========================= -->
 
 <header>
-    <nav class="nav">
+<nav class="nav">
 
-        <a href="#anasayfa" class="logo">
-            <img src="logo.png" alt="Özfavori Koltuk Yıkama">
-        </a>
+    <a href="#anasayfa" class="logo">
+        <img src="./logo.png" alt="Özfavori Koltuk Yıkama">
+    </a>
 
-        <div class="menu">
-            <a href="#anasayfa">Anasayfa</a>
-            <a href="#galeri">Galeri</a>
-            <a href="#hakkimizda">Hakkımızda</a>
-            <a href="#hizmetler">Hizmetler</a>
-            <a href="#iletisim">İletişim</a>
-        </div>
+    <div class="menu">
+        <a href="#anasayfa">Anasayfa</a>
+        <a href="#galeri">Galeri</a>
+        <a href="#hakkimizda">Hakkımızda</a>
+        <a href="#hizmetler">Hizmetler</a>
+        <a href="#iletisim">İletişim</a>
+    </div>
 
-        <a class="header-phone" href="tel:05055984487">
-            ☎ 0505 598 44 87
-        </a>
+    <a class="header-phone" href="tel:05055984487">
+        ☎ 0505 598 44 87
+    </a>
 
-    </nav>
+</nav>
 </header>
 
 
 <!-- =========================
      HERO
-========================== -->
+========================= -->
 
 <section class="hero" id="anasayfa">
 
-    <div class="hero-content">
+<div class="hero-content">
 
-        <div class="hero-text">
+    <div class="hero-text">
 
-            <div class="hero-label">
-                🌿 Profesyonel Yerinde Temizlik
-            </div>
-
-            <h1>
-                Özfavori<br>
-                Koltuk Yıkama
-            </h1>
-
-            <p>
-                Sarıyer ve İstanbul genelinde bitkisel ürünlerle
-                profesyonel yerinde temizlik hizmeti.
-            </p>
-
-            <div class="hero-buttons">
-
-                <a
-                    class="btn btn-whatsapp"
-                    href="https://wa.me/905055984487"
-                    target="_blank"
-                >
-
-                    <span class="wa-icon">
-                        <svg viewBox="0 0 32 32" aria-hidden="true">
-                            <path d="M16 3.2A12.8 12.8 0 0 0 5 22.5L3.4 28.4l6-1.6A12.8 12.8 0 1 0 16 3.2Z"/>
-                            <path d="M11.1 9.9c.4-.4 1-.4 1.4 0l1.7 2.3c.3.4.3.9 0 1.3l-.9 1.1c1 2 2.6 3.5 4.6 4.4l1-.9c.4-.3.9-.3 1.3 0l2.2 1.7c.4.3.5.9.1 1.3-.8 1-2 1.6-3.3 1.5-4.8-.5-9.4-4.1-11.2-8.5-.5-1.3-.2-2.7.8-3.2l2.3-1Z"/>
-                        </svg>
-                    </span>
-
-                    WhatsApp'tan Ulaş
-
-                </a>
-
-                <a class="btn btn-outline" href="#hizmetler">
-                    Hizmetlerimizi Gör
-                </a>
-
-            </div>
-
+        <div class="hero-label">
+            🌿 Profesyonel Yerinde Temizlik
         </div>
 
+        <h1>
+            Özfavori<br>
+            Koltuk Yıkama
+        </h1>
 
-        <div class="natural-badge">
+        <p>
+            Sarıyer ve İstanbul genelinde bitkisel ürünlerle
+            profesyonel yerinde temizlik hizmeti.
+        </p>
 
-            <div class="leaf">🌿</div>
+        <div class="hero-buttons">
 
-            <strong>Doğal Ürünler</strong>
+            <a
+                class="btn btn-whatsapp"
+                href="https://wa.me/905055984487"
+                target="_blank"
+                rel="noopener"
+            >
 
-            <span>Profesyonel temizlik</span>
+                <span class="wa-icon">
+                    <svg viewBox="0 0 32 32" aria-hidden="true">
+                        <path d="M16 3.2A12.8 12.8 0 0 0 5 22.5L3.4 28.4l6-1.6A12.8 12.8 0 1 0 16 3.2Z"/>
+                        <path d="M11.1 9.9c.4-.4 1-.4 1.4 0l1.7 2.3c.3.4.3.9 0 1.3l-.9 1.1c1 2 2.6 3.5 4.6 4.4l1-.9c.4-.3.9-.3 1.3 0l2.2 1.7c.4.3.5.9.1 1.3-.8 1-2 1.6-3.3 1.5-4.8-.5-9.4-4.1-11.2-8.5-.5-1.3-.2-2.7.8-3.2l2.3-1Z"/>
+                    </svg>
+                </span>
+
+                WhatsApp'tan Ulaş
+
+            </a>
+
+            <a class="btn btn-outline" href="#hizmetler">
+                Hizmetlerimizi Gör
+            </a>
 
         </div>
 
     </div>
+
+</div>
 
 </section>
 
 
 <!-- =========================
      FEATURES
-========================== -->
+========================= -->
 
 <div class="features">
 
@@ -852,15 +810,12 @@
     </div>
 
 
-    <!-- DOĞAL ÜRÜNLER
-         İKON VE AÇIKLAMA KALDIRILDI -->
+    <!-- DOĞAL ÜRÜNLER -->
 
     <div class="feature">
 
         <div>
-
             <h3>Doğal Ürünler</h3>
-
         </div>
 
     </div>
@@ -896,371 +851,353 @@
 
 <!-- =========================
      HAKKIMIZDA
-========================== -->
+========================= -->
 
 <section class="about" id="hakkimizda">
 
-    <div class="container">
+<div class="container">
 
-        <div class="section-title">
+    <div class="section-title">
 
-            <span>Biz Kimiz?</span>
+        <span>Biz Kimiz?</span>
 
-            <h2>Hakkımızda</h2>
+        <h2>Hakkımızda</h2>
 
-            <p>
-                Temizlikte profesyonellik ve müşteri memnuniyetini
-                bir araya getiriyoruz.
-            </p>
+        <p>
+            Temizlikte profesyonellik ve müşteri memnuniyetini
+            bir araya getiriyoruz.
+        </p>
 
-        </div>
+    </div>
 
-        <div class="about-content">
+    <div class="about-content">
 
-            <p>
-                Özfavori Koltuk Yıkama olarak Sarıyer ve İstanbul
-                genelinde yerinde profesyonel temizlik hizmetleri
-                sunuyoruz.
-            </p>
+        <p>
+            Özfavori Koltuk Yıkama olarak Sarıyer ve İstanbul
+            genelinde yerinde profesyonel temizlik hizmetleri
+            sunuyoruz.
+        </p>
 
-            <p>
-                Koltuk, sandalye, yatak, araç, ofis halıflex ve cam
-                temizleme hizmetlerimizle yaşam ve çalışma alanlarınızın
-                daha temiz ve ferah olmasına yardımcı oluyoruz.
-            </p>
+        <p>
+            Koltuk, sandalye, yatak, araç, ofis halıflex ve cam
+            temizleme hizmetlerimizle yaşam ve çalışma alanlarınızın
+            daha temiz ve ferah olmasına yardımcı oluyoruz.
+        </p>
 
-            <div class="about-highlight">
-                🌿 Profesyonel Hizmet • Yerinde Temizlik
-            </div>
-
+        <div class="about-highlight">
+            🌿 Profesyonel Hizmet • Yerinde Temizlik
         </div>
 
     </div>
+
+</div>
 
 </section>
 
 
 <!-- =========================
      HİZMETLER
-========================== -->
+========================= -->
 
 <section class="services" id="hizmetler">
 
-    <div class="container">
+<div class="container">
 
-        <div class="section-title">
+    <div class="section-title">
 
-            <span>Hizmetlerimiz</span>
+        <span>Hizmetlerimiz</span>
 
-            <h2>Profesyonel Temizlik Hizmetleri</h2>
+        <h2>Profesyonel Temizlik Hizmetleri</h2>
+
+        <p>
+            İhtiyacınıza uygun profesyonel yerinde temizlik
+            hizmetlerimizi inceleyebilirsiniz.
+        </p>
+
+    </div>
+
+
+    <div class="services-grid">
+
+        <!-- KOLTUK YIKAMA -->
+
+        <div class="service-card">
+
+            <div class="service-image">
+                <img
+                    src="./koltuk.png"
+                    alt="Koltuk Yıkama"
+                >
+            </div>
+
+            <h3>Koltuk Yıkama</h3>
 
             <p>
-                İhtiyacınıza uygun profesyonel yerinde temizlik
-                hizmetlerimizi inceleyebilirsiniz.
+                Koltuk ve oturma gruplarınız için profesyonel
+                yerinde temizlik hizmeti.
             </p>
 
         </div>
 
 
-        <div class="services-grid">
+        <!-- SANDALYE YIKAMA -->
 
+        <div class="service-card">
 
-            <!-- KOLTUK YIKAMA -->
-
-            <div class="service-card">
-
-                <div class="service-image">
-
-                    <img
-                        src="koltuk.png"
-                        alt="Koltuk Yıkama"
-                    >
-
-                </div>
-
-                <h3>Koltuk Yıkama</h3>
-
-                <p>
-                    Koltuk ve oturma gruplarınız için profesyonel
-                    yerinde temizlik hizmeti.
-                </p>
-
+            <div class="service-image">
+                <img
+                    src="./sandalye.png"
+                    alt="Sandalye Yıkama"
+                >
             </div>
 
+            <h3>Sandalye Yıkama</h3>
 
-            <!-- SANDALYE YIKAMA -->
+            <p>
+                Sandalye ve kumaş yüzeyler için profesyonel
+                temizlik hizmeti.
+            </p>
 
-            <div class="service-card">
+        </div>
 
-                <div class="service-image">
 
-                    <img
-                        src="sandalye.png"
-                        alt="Sandalye Yıkama"
-                    >
+        <!-- YATAK YIKAMA -->
 
-                </div>
+        <div class="service-card">
 
-                <h3>Sandalye Yıkama</h3>
-
-                <p>
-                    Sandalye ve kumaş yüzeyler için profesyonel
-                    temizlik hizmeti.
-                </p>
-
+            <div class="service-image">
+                <img
+                    src="./yatak.png"
+                    alt="Yatak Yıkama"
+                >
             </div>
 
+            <h3>Yatak Yıkama</h3>
 
-            <!-- YATAK YIKAMA -->
+            <p>
+                Yatak yüzeylerinde profesyonel yerinde
+                temizlik hizmeti.
+            </p>
 
-            <div class="service-card">
+        </div>
 
-                <div class="service-image">
 
-                    <img
-                        src="yatak.png"
-                        alt="Yatak Yıkama"
-                    >
+        <!-- ARAÇ YIKAMA -->
 
-                </div>
+        <div class="service-card">
 
-                <h3>Yatak Yıkama</h3>
-
-                <p>
-                    Yatak yüzeylerinde profesyonel yerinde
-                    temizlik hizmeti.
-                </p>
-
+            <div class="service-image">
+                <img
+                    src="./ara%C3%A7.png"
+                    alt="Araç Yıkama"
+                >
             </div>
 
+            <h3>Araç Yıkama</h3>
 
-            <!-- ARAÇ YIKAMA -->
+            <p>
+                Araç içi koltuk ve kumaş yüzeylerde profesyonel
+                temizlik hizmeti.
+            </p>
 
-            <div class="service-card">
+        </div>
 
-                <div class="service-image">
 
-                    <img
-                        src="araç.png"
-                        alt="Araç Yıkama"
-                    >
+        <!-- OFİS HALIFLEX -->
 
-                </div>
+        <div class="service-card">
 
-                <h3>Araç Yıkama</h3>
-
-                <p>
-                    Araç içi koltuk ve kumaş yüzeylerde profesyonel
-                    temizlik hizmeti.
-                </p>
-
+            <div class="service-image">
+                <img
+                    src="./ofis.png"
+                    alt="Ofis Halıflex"
+                >
             </div>
 
+            <h3>OFİS HALIFLEX</h3>
 
-            <!-- OFİS HALIFLEX -->
+            <p>
+                Ofis halıflex ve zemin yüzeylerinin profesyonel
+                yerinde temizliği.
+            </p>
 
-            <div class="service-card">
+        </div>
 
-                <div class="service-image">
 
-                    <img
-                        src="ofis.png"
-                        alt="Ofis Halıflex"
-                    >
+        <!-- CAM TEMİZLEME -->
 
-                </div>
+        <div class="service-card">
 
-                <h3>OFİS HALIFLEX</h3>
-
-                <p>
-                    Ofis halıflex ve zemin yüzeylerinin profesyonel
-                    yerinde temizliği.
-                </p>
-
+            <div class="service-image">
+                <img
+                    src="./cam.png"
+                    alt="Cam Temizleme"
+                >
             </div>
 
+            <h3>Cam Temizleme</h3>
 
-            <!-- CAM TEMİZLEME -->
-
-            <div class="service-card">
-
-                <div class="service-image">
-
-                    <img
-                        src="cam.png"
-                        alt="Cam Temizleme"
-                    >
-
-                </div>
-
-                <h3>Cam Temizleme</h3>
-
-                <p>
-                    Ev ve iş yerlerindeki cam yüzeyler için
-                    profesyonel temizlik hizmeti.
-                </p>
-
-            </div>
-
+            <p>
+                Ev ve iş yerlerindeki cam yüzeyler için
+                profesyonel temizlik hizmeti.
+            </p>
 
         </div>
 
     </div>
+
+</div>
 
 </section>
 
 
 <!-- =========================
      GALERİ
-========================== -->
+========================= -->
 
 <section class="gallery" id="galeri">
 
-    <div class="container">
+<div class="container">
 
-        <div class="section-title">
+    <div class="section-title">
 
-            <span>Çalışmalarımız</span>
+        <span>Çalışmalarımız</span>
 
-            <h2>Galeri</h2>
+        <h2>Galeri</h2>
 
-            <p>
-                Gerçekleştirdiğimiz temizlik çalışmalarından
-                örnekler.
-            </p>
+        <p>
+            Gerçekleştirdiğimiz temizlik çalışmalarından
+            örnekler.
+        </p>
 
+    </div>
+
+    <div class="gallery-grid">
+
+        <div class="gallery-item">
+            Çalışma Fotoğrafı
         </div>
 
-        <div class="gallery-grid">
+        <div class="gallery-item">
+            Çalışma Fotoğrafı
+        </div>
 
-            <div class="gallery-item">
-                Çalışma Fotoğrafı
-            </div>
-
-            <div class="gallery-item">
-                Çalışma Fotoğrafı
-            </div>
-
-            <div class="gallery-item">
-                Çalışma Fotoğrafı
-            </div>
-
+        <div class="gallery-item">
+            Çalışma Fotoğrafı
         </div>
 
     </div>
+
+</div>
 
 </section>
 
 
 <!-- =========================
      İLETİŞİM
-========================== -->
+========================= -->
 
 <section class="contact" id="iletisim">
 
-    <div class="container">
+<div class="container">
 
-        <div class="section-title">
+    <div class="section-title">
 
-            <span>İletişim</span>
+        <span>İletişim</span>
 
-            <h2>Bizimle İletişime Geçin</h2>
+        <h2>Bizimle İletişime Geçin</h2>
+
+        <p>
+            Hizmetlerimiz hakkında bilgi almak ve randevu
+            oluşturmak için bize ulaşabilirsiniz.
+        </p>
+
+    </div>
+
+
+    <div class="contact-grid">
+
+        <div class="contact-box">
+
+            <div class="icon">☎</div>
+
+            <h3>Telefon</h3>
 
             <p>
-                Hizmetlerimiz hakkında bilgi almak ve randevu
-                oluşturmak için bize ulaşabilirsiniz.
+                <a href="tel:05055984487">
+                    0505 598 44 87
+                </a>
             </p>
 
         </div>
 
 
-        <div class="contact-grid">
+        <div class="contact-box">
 
+            <div class="icon">💬</div>
 
-            <div class="contact-box">
+            <h3>WhatsApp</h3>
 
-                <div class="icon">☎</div>
-
-                <h3>Telefon</h3>
-
-                <p>
-
-                    <a href="tel:05055984487">
-                        0505 598 44 87
-                    </a>
-
-                </p>
-
-            </div>
-
-
-            <div class="contact-box">
-
-                <div class="icon">💬</div>
-
-                <h3>WhatsApp</h3>
-
-                <p>
-
-                    <a
-                        href="https://wa.me/905055984487"
-                        target="_blank"
-                    >
-                        WhatsApp'tan Yazın
-                    </a>
-
-                </p>
-
-            </div>
-
-
-            <div class="contact-box">
-
-                <div class="icon">📍</div>
-
-                <h3>Hizmet Bölgesi</h3>
-
-                <p>
-                    Sarıyer ve İstanbul Geneli
-                </p>
-
-            </div>
-
+            <p>
+                <a
+                    href="https://wa.me/905055984487"
+                    target="_blank"
+                    rel="noopener"
+                >
+                    WhatsApp'tan Yazın
+                </a>
+            </p>
 
         </div>
 
 
-        <div class="contact-button">
+        <div class="contact-box">
 
-            <a
-                class="btn btn-whatsapp"
-                href="https://wa.me/905055984487"
-                target="_blank"
-            >
+            <div class="icon">📍</div>
 
-                <span class="wa-icon">
+            <h3>Hizmet Bölgesi</h3>
 
-                    <svg viewBox="0 0 32 32" aria-hidden="true">
-                        <path d="M16 3.2A12.8 12.8 0 0 0 5 22.5L3.4 28.4l6-1.6A12.8 12.8 0 1 0 16 3.2Z"/>
-                        <path d="M11.1 9.9c.4-.4 1-.4 1.4 0l1.7 2.3c.3.4.3.9 0 1.3l-.9 1.1c1 2 2.6 3.5 4.6 4.4l1-.9c.4-.3.9-.3 1.3 0l2.2 1.7c.4.3.5.9.1 1.3-.8 1-2 1.6-3.3 1.5-4.8-.5-9.4-4.1-11.2-8.5-.5-1.3-.2-2.7.8-3.2l2.3-1Z"/>
-                    </svg>
-
-                </span>
-
-                WhatsApp'tan Randevu Al
-
-            </a>
+            <p>
+                Sarıyer ve İstanbul Geneli
+            </p>
 
         </div>
 
     </div>
+
+
+    <div class="contact-button">
+
+        <a
+            class="btn btn-whatsapp"
+            href="https://wa.me/905055984487"
+            target="_blank"
+            rel="noopener"
+        >
+
+            <span class="wa-icon">
+
+                <svg viewBox="0 0 32 32" aria-hidden="true">
+                    <path d="M16 3.2A12.8 12.8 0 0 0 5 22.5L3.4 28.4l6-1.6A12.8 12.8 0 1 0 16 3.2Z"/>
+                    <path d="M11.1 9.9c.4-.4 1-.4 1.4 0l1.7 2.3c.3.4.3.9 0 1.3l-.9 1.1c1 2 2.6 3.5 4.6 4.4l1-.9c.4-.3.9-.3 1.3 0l2.2 1.7c.4.3.5.9.1 1.3-.8 1-2 1.6-3.3 1.5-4.8-.5-9.4-4.1-11.2-8.5-.5-1.3-.2-2.7.8-3.2l2.3-1Z"/>
+                </svg>
+
+            </span>
+
+            WhatsApp'tan Randevu Al
+
+        </a>
+
+    </div>
+
+</div>
 
 </section>
 
 
 <!-- =========================
      FOOTER
-========================== -->
+========================= -->
 
 <footer>
 
@@ -1272,12 +1209,13 @@
 
 <!-- =========================
      FLOATING WHATSAPP
-========================== -->
+========================= -->
 
 <a
     class="floating-whatsapp"
     href="https://wa.me/905055984487"
     target="_blank"
+    rel="noopener"
     aria-label="WhatsApp"
 >
 
