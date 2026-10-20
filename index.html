@@ -1361,16 +1361,44 @@ aria-label="WhatsApp"
 
 
 
-<!-- Google Ads dönüşüm ölçümü: telefon ve WhatsApp bağlantılarına tıklama -->
+
+<!-- Google Ads dönüşüm ölçümü: telefon ve WhatsApp tıklamaları -->
 <script>
+function gtag_report_conversion(url) {
+  var callback = function () {
+    if (url) {
+      window.location.href = url;
+    }
+  };
+
+  if (typeof gtag !== 'function') {
+    if (url) window.location.href = url;
+    return false;
+  }
+
+  gtag('event', 'conversion', {
+    'send_to': 'AW-18307850262/V6KnCNfnu4UdEJbA7plE',
+    'event_callback': callback,
+    'event_timeout': 2000,
+    'transport_type': 'beacon'
+  });
+
+  return false;
+}
+
 (function () {
-  var sendTo = 'AW-18307850262/V6KnCNfnu4UdEJbA7plE';
   document.addEventListener('click', function (event) {
     var link = event.target.closest('a[href]');
-    if (!link || typeof gtag !== 'function') return;
+    if (!link) return;
+
     var href = (link.getAttribute('href') || '').toLowerCase();
-    if (href.indexOf('tel:') === 0 || href.indexOf('wa.me/') !== -1 || href.indexOf('api.whatsapp.com/') !== -1) {
-      gtag('event', 'conversion', { 'send_to': sendTo, 'transport_type': 'beacon' });
+
+    if (
+      href.indexOf('tel:') === 0 ||
+      href.indexOf('wa.me/') !== -1 ||
+      href.indexOf('api.whatsapp.com/') !== -1
+    ) {
+      gtag_report_conversion();
     }
   });
 })();
@@ -1378,3 +1406,4 @@ aria-label="WhatsApp"
 
 </body>
 </html>
+
